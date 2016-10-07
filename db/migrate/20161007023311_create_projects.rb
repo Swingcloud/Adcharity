@@ -4,6 +4,7 @@ class CreateProjects < ActiveRecord::Migration[5.0]
     	t.string :name, :null => false, :limit => 20, :index => true
     	t.text :description
     	t.integer :donate_amount
+    	t.datetime :expire_date
 
 
       t.timestamps
