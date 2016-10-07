@@ -33,6 +33,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       ## user info
       t.string :name
       t.string :nickname, :default => ""
+      t.integer :donate_project_id
+      
        
 
 
