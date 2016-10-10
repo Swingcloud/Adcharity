@@ -1,0 +1,4 @@
+development:
+  app_id: 652791668235323
+  secret: 3230eef2a0648652a291d5b3095c3efb  
+  callback_url: http://localhost:3000/users/auth/facebook/callback
