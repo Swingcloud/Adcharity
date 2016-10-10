@@ -4,17 +4,26 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook]
+
+  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
+
   has_many :user_projectships
   has_many :projects, :through => :user_projectships
 
   has_many :user_adships
   has_many :advertisements, :through => :user_adships
 
+
+
+
+
   def self.from_omniauth(auth)
     # Case 1: Find existing user by facebook uid
     user = User.find_by_fb_uid( auth.uid )
     if user
         user.fb_token = auth.credentials.token
+        user.avatar = auth.info.image
         #user.fb_raw_data = auth
         user.save!
     return user
@@ -35,6 +44,7 @@ class User < ApplicationRecord
     user.fb_uid = auth.uid
     user.fb_token = auth.credentials.token
     user.email = auth.info.email
+    user.avatar = auth.info.image
     user.password = Devise.friendly_token[0,20]
     #user.fb_raw_data = auth
     user.save!
