@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161010070813) do
+ActiveRecord::Schema.define(version: 20161011014112) do
 
   create_table "advertisements", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "ad_href"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20161010070813) do
     t.integer  "donate_amount"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+    t.integer  "institute_id"
     t.index ["name"], name: "index_projects_on_name", using: :btree
   end
 
