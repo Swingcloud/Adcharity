@@ -44,6 +44,8 @@ class User < ApplicationRecord
     user.fb_uid = auth.uid
     user.fb_token = auth.credentials.token
     user.email = auth.info.email
+    user.name = auth.info.name
+    user.nickname = auth.info.name
     user.avatar = auth.info.image
     user.password = Devise.friendly_token[0,20]
     #user.fb_raw_data = auth
