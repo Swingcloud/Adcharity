@@ -3,6 +3,7 @@
   <head>
     <title>Adcharity</title>
     <%= csrf_meta_tags %>
+    <%= favicon_link_tag 'ADICO.ico' %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -26,7 +27,11 @@
     	<%= link_to('註冊', new_registration_path(:user)) %> |
     	<%= link_to('登入', new_session_path(:user)) %> |
       <%= link_to "登入 Facebook", user_facebook_omniauth_authorize_path %>
-  	<% end %>
+  	<% end %>|
+    <%= link_to '回首頁', root_path %>
+    <div class="text-center">
+      <%= image_tag("ICON.png") %>
+    </div>
 
     <%= yield %>
   </body>
