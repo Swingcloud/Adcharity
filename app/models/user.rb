@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :user_projectships
   has_many :projects, :through => :user_projectships
 
-  has_many :user_adships
+  has_many :user_adships, :dependent => :destroy
   has_many :advertisements, :through => :user_adships
 
 
@@ -26,6 +26,7 @@ class User < ApplicationRecord
         user.avatar = auth.info.image
         #user.fb_raw_data = auth
         user.save!
+        user.first_time_watch_ad?(cookie)
     return user
   	end
 
@@ -36,6 +37,7 @@ class User < ApplicationRecord
      	existing_user.fb_token = auth.credentials.token	
      	#existing_user.fb_raw_data = auth
 	    existing_user.save!
+	    existing_user.first_time_watch_ad?(cookie)
 	    return existing_user
     end
 
@@ -57,7 +59,7 @@ class User < ApplicationRecord
   # @user = User.find(1)
   # In controller: @user.first_time_watch_ad?(cookies[:user_first_sign_up])
   def first_time_watch_ad?(cookie)
-  	if cookie
+  	unless cookie
   		UserAdship.create( :user_id => self.id , :advertisement_id => cookie)   
   	end
   end
