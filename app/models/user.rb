@@ -18,7 +18,7 @@ class User < ApplicationRecord
 
 
 
-  def self.from_omniauth(auth)
+  def self.from_omniauth(auth, cookie)
     # Case 1: Find existing user by facebook uid
     user = User.find_by_fb_uid( auth.uid )
     if user
@@ -50,7 +50,16 @@ class User < ApplicationRecord
     user.password = Devise.friendly_token[0,20]
     #user.fb_raw_data = auth
     user.save!
+    user.first_time_watch_ad?(cookie)
     return user
+  end
+
+  # @user = User.find(1)
+  # In controller: @user.first_time_watch_ad?(cookies[:user_first_sign_up])
+  def first_time_watch_ad?(cookie)
+  	if cookie
+  		UserAdship.create( :user_id => self.id , :advertisement_id => cookie)   
+  	end
   end
        
 
