@@ -63,6 +63,27 @@ class User < ApplicationRecord
   		UserAdship.create( :user_id => self.id , :advertisement_id => cookie)   
   	end
   end
+
+
+  def unwatch_ad
+    watch_ad = self.advertisements.map{ |ad| ad.id}
+    all_ad = Advertisement.all.map{|ad| ad.id}
+    unwatch = all_ad - watch_ad
+    return unwatch
+
+
+
+  end
+
+  # def watched_ad=(arr)
+  #   ids = arr.map do |ad_id|
+  #     ad_id = tag_name.strip.downcase
+  #     tag = Tag.find_by_name(tag_name) || Tag.create(:name => tag_name)
+  #     tag.id
+  #   end
+
+  #   self.tag_ids = ids
+  # end
        
 
 end
