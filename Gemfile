@@ -18,6 +18,7 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem "mysql2"
 gem "paperclip", "~> 5.0.0"
+gem 'ckeditor'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

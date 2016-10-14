@@ -1,46 +1,46 @@
 <h2 class="text-center">廣告列表</h2>
 <div class="container">
-	<div class="row">
-		<% @advertisements.each do |a| %>
-			<div class="col-sm-4">
-				<div class="embed-container"> 
-					<%= embed(a.ad_href) %> 
-				</div>
-				<p>
-					<%= a.price_per_look %> 元
-				</p>
-			</div>
-		<% end %>
-	</div>
+  <div class="row">
+    <% @advertisements.each do |a| %>
+      <div class="col-sm-4">
+        <div class="embed-container"> 
+          <%= embed(a.ad_href) %> 
+        </div>
+        <p>
+          <%= a.price_per_look %> 元
+        </p>
+      </div>
+    <% end %>
+  </div>
 </div>
 <div class="text-center">
-	<%= link_to '新增廣告', new_admin_advertisements_path %>
+  <%= link_to '新增廣告', new_admin_advertisements_path %>
 </div>
 <h2 class="text-center">專案列表</h2>
 <div class="container">
-	<div class="row">
-		<% @projects.each do |p|%>
-			<div class="col-sm-4">
-				<ul>
-					<li><%= p.name %></li>
-					<li><%= p.description %></li>
-					<li><%= p.donate_amount %></li>
-					<li>
-						<div class="pic-container">
-							<%= image_tag p.image.url%>
-						</div>
-					</li>
-					<li><%= link_to'詳細專案', project_path(p) %>	</li>
-			</ul>
-			</div>
-		<% end %>
-	</div>
-	<% if user_signed_in? %>
-		<div>HI</div>
-	<% end %>
+  <div class="row">
+    <% @projects.each do |p|%>
+      <div class="col-sm-4">
+        <ul>
+          <li><%= p.name %></li>
+          <li><%= p.description %></li>
+          <li><%= p.donate_amount %></li>
+          <li>
+            <div class="pic-container">
+              <%= image_tag p.image.url%>
+            </div>
+          </li>
+          <li><%= link_to'詳細專案', project_path(p) %> </li>
+      </ul>
+      </div>
+    <% end %>
+  </div>
+  <% if user_signed_in? %>
+    <div>HI</div>
+  <% end %>
 </div>
 <div class="text-center">
-	<%= link_to '新增專案', new_admin_project_path %>
+  <%= link_to '新增專案', new_admin_project_path %>
 </div>
 <div class="test"></div>
 <div class="test2"></div>

@@ -1,15 +1,26 @@
 <div class="form-group col-lg-12">
-	<%= f.label :name, "標題" %>
-	<%= f.text_field :name ,:class =>"form-control"%>
+  <%= f.label :name, "標題" %>
+  <%= f.text_field :name ,:class =>"form-control"%>
 </div>
 <div class="form-group col-lg-12">
-	<%= f.label :description, "內文"%>
-	<%= f.text_area :description ,:class =>"form-control"%>
+ <%= f.label :institute_id, "所屬單位" %>
+ <%= f.select :institute_id, @institutes.map{ |i| [i.name, i.id] }, :include_blank=> false, :class => "form-control group-form" %>
+</div>
+<div class="form-group col-lg-12">
+  <%= f.label :short_text, "簡短描述" %>
+	<%= f.text_area :short_text ,:class =>"form-control"%>
+</div>
+<div class="form-group col-lg-12">
+  <%= f.label :description, "內文"%>
+  <%#= f.text_area :description ,:class =>"form-control"%>
+  <%= f.cktext_area :description, :class => "form-control", :ckeditor => {:language => 'zh-tw'} %>
 </div>
 
+
+
 <div class="form-group col-lg-12">
-	<%= f.file_field :image %>
-	<% if @project.image.exists? %>
-  	<%= check_box_tag "remove_upload_file", "1" %>移除上傳檔案
-	<% end %>
+  <%= f.file_field :image %>
+  <% if @project.image.exists? %>
+    <%= check_box_tag "remove_upload_file", "1" %>移除上傳檔案
+  <% end %>
 </div>

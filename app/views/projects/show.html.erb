@@ -1,6 +1,6 @@
 <div>
 <%= @project.name %>
-<%= simple_format @project.description %>
+<%= raw(@project.description) %>
 </div>
 <div>
 <%= link_to '贊助專案' , project_advertisement_path(@project, "watchAd") %>

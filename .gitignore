@@ -22,3 +22,8 @@
 
 # Ignore Omniauth setting
 /config/facebook.yml
+
+# Ignore images
+/public/ckeditor_assets/pictures
+/public/system/users/avatars
+/public/uploads/images
