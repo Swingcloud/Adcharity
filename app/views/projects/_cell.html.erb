@@ -1,0 +1,29 @@
+	  <div class="projects">
+	    <div class="project-cell" onclick="location.href=
+	'<%= project_path(p)%>';">
+	      <div class="project-img">
+	        <%= image_tag p.image.url%>
+	      </div>
+	      <div class="p-desp">
+	        <div class="project-name">
+	        	<h2><%= p.name %></h2>
+	        </div>
+	        <div class="project-institute">
+	        	<h3><%= p.institute.name %></h3>
+	        </div>
+	        <div class="progress-bar">
+	          <div class="progress-bar-finished">
+	          </div>
+	        </div>
+	        <div class="money clear-fix">
+	          <p>金額
+	            <span class="accum">12,342</span>
+	            <span class="total"> / 15000</span>
+	          </p>
+	        </div>
+	        <div class="days">
+	          <p>剩 12 天</p>
+	        </div>
+	      </div>
+	    </div>
+	  </div>

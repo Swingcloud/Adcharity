@@ -1,2 +1,29 @@
 <%= @user.name %>
+<br>
 <%=image_tag @user.avatar.url %>
+<br>
+
+<h2>看過的廣告</h2>
+<div class="container">
+  <div class="row">
+    <% @user.advertisements.each do |a| %>
+      <div class="col-sm-4">
+        <div class="embed-container"> 
+          <%= embed(a.ad_href) %> 
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+贊助過的專案
+<div class="container">
+  <div class="row">
+    <% @user.projects.each do |p| %>
+      <div class="col-sm-4">
+        <div class="embed-container"> 
+          <%= p.name %> 
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

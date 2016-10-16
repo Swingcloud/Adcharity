@@ -9,7 +9,7 @@ class AdvertisementsController < ApplicationController
     		:expires => 2.minutes.from_now
     	}
     else
-      if current_user.unwatch.count > 0
+      if current_user.unwatch_ad.count > 0
     	 @advertisement = Advertisement.find(current_user.unwatch_ad.sample(1)[0])
         current_user.advertisements << @advertisement
       else

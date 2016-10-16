@@ -1,23 +1,80 @@
-<h1 class="text-center">AdCharity</h1>
-<div class="container">
-	<div class="row">
-		<% @projects.each do |p|%>
-			<div class="col-sm-4">
-				<ul>
-					<li><%= p.name %></li>
-					<li><%= p.description %></li>
-					<li><%= p.donate_amount %></li>
-					<li>
-						<div class="pic-container">
-							<%= image_tag p.image.url%>
-						</div>
-					</li>
-					<li><%= link_to'詳細專案', project_path(p) ,:class=>"btn btn-primary"%>	</li>
-			</ul>
-			</div>
-		<% end %>
-	</div>
-	<% if user_signed_in? %>
-		<div>HI</div>
-	<% end %>
+
+<div class="banner">
 </div>
+<div class="highlight_p">
+  <div class="desp">
+    <div class="desp-text desc">
+      <%= image_tag "Group.svg" %>
+      <h2>焦點專案</h2>
+    </div>
+    <div class="action-icon desc">
+      <a href="#">瀏覽全部</a>
+    </div>  
+  </div>
+  <div class="project-container">
+  	<% @projects.each do |p| %>
+			<%= render :partial => "projects/cell", :locals => {:p => p} %>
+	  <% end %>
+  </div>
+</div>
+<div class="newest_p"> 
+	<div class="desp">
+    <div class="desp-text desc">
+      <%= image_tag "Group.svg" %>
+      <h2>最新專案</h2>
+    </div>
+    <div class="action-icon desc">
+      <a href="#">瀏覽全部</a>
+    </div>  
+  </div>
+  <div class="project-container">
+	  <div class="projects">
+	    <div class="project-cell" onclick="location.href=
+	'<%= project_path(@project)%>';">
+	      <div class="project-img">
+	        <%= image_tag @project.image.url%>
+	      </div>
+	      <div class="p-desp">
+	        <div class="project-name">
+	        	<h2><%= @project.name %></h2>
+	        </div>
+	        <div class="project-institute">
+	        	<h3><%= @project.institute.name %></h3>
+	        </div>
+	        <div class="progress-bar">
+	          <div class="progress-bar-finished">
+	          </div>
+	        </div>
+	        <div class="money clear-fix">
+	          <p>金額
+	            <span class="accum">12,342</span>
+	            <span class="total"> / 15000</span>
+	          </p>
+	        </div>
+	        <div class="days">
+	          <p>剩 12 天</p>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+  </div>
+</div>
+<div class="partner">
+  <div class="partner-container">
+    <h1>合作夥伴</h1>
+    <%= image_tag "partner/logo_2_1.png", :class=> "parnter_logo" %>
+    <%= image_tag "partner/louder.png", :class=> "parnter_logo" %>
+    <%= image_tag "partner/logo3.png", :class=> "parnter_logo" %>
+    <%= image_tag "partner/disable.png", :class=> "parnter_logo" %>
+  </div>
+</div>
+<div class="recommend">
+  <div class="recommend-container">
+    <h2>
+      您想推薦急需資源幫助的社福團體嗎？<br />
+      歡迎與我們聯絡！
+    </h2>
+    <a href="#">我要推薦基金會</a>
+  </div>
+</div>
+

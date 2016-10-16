@@ -1,5 +1,521 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$break-small: 320px;
+$break-medium: 768px;
+$break-large: 1024px;
+$break-hd: 1440px;
+$header-hover-color: #999;
 
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+  //border: solid 1px black;
+  font-family: 'Noto Sans TC' ,sans-serif , Heiti TC , "Microsoft JhengHei";
+  position: relative;
+  font-size: 16px;
+}
+html,body{
+	height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+
+.nav{
+  
+  display: flex; 
+  justify-content: space-between; 
+  text-align: center;
+
+  .nav-left{
+    width: 30%;
+    .search_icon{
+      img{
+        position: absolute;
+        left: 10px;
+    		top: -2px;
+      }
+      .search_project{
+        width: 100%;
+        border: 0px;
+        padding: 2px;
+      }
+    }
+  }
+  .logo_container{
+    width: 40%;
+  }
+  .nav-right{
+    width: 30%;
+  }
+}
+header{
+	height: 63px;
+  .logo{
+    top: 14px;
+  }
+  
+  ul{
+    margin: 0;
+    position: absolute;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    top: 19px;
+    
+    li{
+      width: 50%;
+      font-size: 16px;
+      letter-spacing: 2px;
+      color: #4A4A4A;
+      a{
+      	color: inherit;
+      	&:hover {
+        color: $header-hover-color;
+        text-decoration: none;
+    		}
+      }
+    }
+  }
+  .ul-right{
+    width: 70%;
+    right: 0;
+  }
+}
+.banner{
+  width: 100%;
+  height: 272px;
+  background: image-url("BANNER2.png");
+  border-bottom: solid 2px #E25958;
+  background-size: cover;
+  background-position: top center;
+}
+.projects{
+  height: 350px;
+  width: 308px;
+  margin: 0 auto;
+}
+.desc{
+  display: inline-block;
+}
+.desp{
+  height: 70px;
+  padding-top: 30px;
+  margin: 0 auto;
+  font-size: 0px;
+  .desp-text{
+    width: 70%;
+    img, h2{
+      position: absolute;
+    }
+    h2{
+     left: 30px;
+     margin: 0;
+     font-size: 18px;
+     letter-spacing: 2.25px;
+     font-weight: 400;
+    }
+  }
+  .action-icon{
+    text-align: right;
+    position: absolute;
+    width: 30%;
+    a{
+      padding: 3px 10px;
+      border: solid 1px #786D6D;
+      border-radius: 2px;
+      color: #4A4242;
+      text-decoration: none;
+      font-size: 10px;
+      bottom: 2px;
+      font-weight: 300;
+    }
+  } 
+}
+.project-cell{
+	border: solid 1px #D8D8D8;
+	border-radius: 2px;
+	cursor: pointer;
+  .project-img
+    {
+    	border-top-left-radius: 2px;
+    	border-top-right-radius: 2px;
+      height: 214px;
+      overflow: hidden;
+      img{
+      	width: 100%;
+      	height: auto;
+      }
+  }
+  .p-desp{
+    padding-left: 6px;
+    height: 103.5px;
+  }
+  h2{
+    padding-top: 8px;
+    padding-bottom: 2px;
+    margin: 0px;
+    font-size: 16px;
+    color: #4a4a4a;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+  h3{
+    margin-top: 2.5px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #3B8C9F;
+    letter-spacing: 1px;
+    font-weight: 300;	
+  }
+  p{
+    font-size: 10px;
+    color: #575757;
+    letter-spacing: 1px;
+  }
+  .accum{
+    font-size: 14px;
+    font-weight: 900;  
+  }
+  .total{
+    font-size: 12px;
+  }
+  .progress-bar{
+    width: 285px;
+    height: 7.8px;
+    border-radius: 2px;
+    background-color: #D8D8D8;
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+  .progress-bar-finished{
+    width: 210px;
+    height: 7.7px;
+    background-color: #62B8CC;
+    border-radius: 2px
+  }
+}
+.money{
+  float: left;
+}
+.days{
+  float: right;
+  margin-top: 2.5px;
+  p{
+    padding-right: 13px;  
+  }
+}
+.newest_p{
+  border-bottom: solid 1px #E15958;
+  height: 425px;
+}
+
+.highlight_p{
+  border-bottom: solid 1px #E6E6E6;
+  height: auto;
+}
+.partner{
+  height: 280px;
+  border-bottom: solid 1px #E6E6E6;
+}
+.partner-container{
+  text-align: center;
+  width: 230px;
+  margin: 0 auto;
+  h1{
+    margin-top: 26px;
+    margin-bottom: 14px;
+    color: #7A7A7A;
+    letter-spacing: 2.5px;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  img{
+    margin-bottom: 20px;
+    width: 230px;
+  }
+}
+.recommend{
+  height: 180px;
+  text-align: center;
+  border-bottom: solid 2px #E25958;
+  h2{
+    color: #7A7A7A;
+    padding-top: 35px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 1.75px;
+    margin-bottom: 27px;
+    font-weight: 400;
+  }
+  a{
+    text-align: center;
+    letter-spacing: 2.25px;      
+    padding: 11px 30px;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #E15958;
+    font-weight: 300;
+    font-size: 18px;
+  }
+}
+footer{
+  
+  background-color: #464646;
+  padding-top: 25px;
+  ul{ 
+    list-style: none;
+    padding: 0;
+    li{
+      margin-bottom: 20px;
+      a{
+        color: #CECECE;
+        text-decoration: none;
+        font-size: 18px; 
+        letter-spacing: 2.25px;
+        font-weight: 300;
+      }
+    }
+  }
+  img{
+    margin-top: 10px;
+    width: 163px;
+  }
+}
+.footer-nav{
+  text-align: center;
+  height: 300px;
+
+}
+
+.footer-right{
+  background-color: #313131;
+  height: 64px;
+  ul{
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding-top: 23px;
+    padding-left: 23px;
+    bottom: 5px;
+    img{
+      margin: 0;
+      width: 128px;
+      bottom: 2px;
+    }
+    li{
+      color: #737373;
+      display: inline-block;
+      p{
+        font-size: 12px;
+        margin: 0;
+        padding-left: 5px;
+        font-weight: 400;
+      }
+    }
+  }
+  .fanpage{
+    float: right;
+		right: 28px;
+    top: 11px;    
+    img{
+    	width: 7.5px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px){
+	.banner{
+		height: 232px;
+	}
+}
+
+@media screen and (max-width: $break-medium - 1) {
+	header{
+  	width: 100%;
+  	height: 141px;
+  	box-shadow: 0px 2px 4px #999999;
+		ul{
+  		top: 22px;
+    }
+    .nav{
+      flex-wrap: wrap;
+      .logo_container{
+        width: 100%;
+        order: 1;
+        border-bottom: solid 1px #D9D9D9;
+        height: 68px;
+        text-align: center;
+        .logo{
+          top: 20px;
+        }
+      }
+      .nav-left{
+        order: 2;
+        width: 50%;
+        ul{
+          width: 100%;
+        }
+      }
+      .nav-right{
+        order: 3;
+        width: 50%;
+      }
+    } 
+    .ul-right{
+    	width: 100%;
+    } 
+  }
+  .coop{
+    display: none;
+  }
+ 
+	.desp{
+		width: 308px;
+	}
+
+}
+
+@media screen and (min-width: 550px) and (max-width: $break-medium - 1) {
+	.banner{
+  	height: 380px;
+	}
+}
+
+
+@media screen and (min-width: $break-medium) and (max-width: $break-large - 1) {
+  header{
+    .ul-right{
+      width: 85%;  
+    }
+ 
+  }
+  .coop{
+    display: none;
+  }
+  .banner{
+  	width: 100%;
+  	height: 293px;
+  	background: image-url("FBwall_02.png");
+  	border-bottom: solid 2px #E25958;
+  	background-size: cover;
+  	background-position: top top;
+	}
+	.desp{
+		max-width: 659px;
+	}
+	.project-container{
+		max-width: 659px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.projects{
+		margin: 0px;
+	}
+	.highlight_p {
+    border-bottom: none;
+    height: auto;
+	}
+}
+
+@media screen and (min-width: 900px) and (max-width: $break-large - 1) {
+	.banner{
+  	width: 100%;
+  	height: 350px;
+  	background: image-url("FBwall_02.png");
+  	border-bottom: solid 2px #E25958;
+  	background-size: cover;
+  	background-position: top top;
+	}
+}
+
+@media screen and (min-width: $break-large) and (max-width: $break-hd - 1) {
+	 header{
+    .ul-right{
+      width: 95%;  
+    }
+  }
+	.banner{
+  	width: 100%;
+  	height: 390px;
+  	background: image-url("FBwall_02_Large.png");
+  	border-bottom: solid 2px #E25958;
+  	background-size: cover;
+  	background-position: top top;
+	}
+	.desp{
+		max-width: 965px;
+	}
+	.project-container{
+		max-width: 965px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+	.projects{
+		margin: 0px;
+	}
+	.highlight_p {
+    border-bottom: none;
+    height: auto;
+	}
+}
+@media screen and (min-width: 1250px) and (max-width: $break-hd - 1) {
+	.banner{
+  	height: 450px;
+	}
+}
+
+
+@media screen and (min-width: $break-hd) {
+	 header{
+    .ul-right{
+      width: 95%;  
+    }
+  }
+	.banner{
+  	width: 100%;
+  	height: 550px;
+  	background: image-url("FBwall_02_HD.png");
+  	border-bottom: solid 2px #E25958;
+  	background-size: cover;
+  	background-position: top top;
+	}
+	.desp{
+		max-width: 1273px;
+	}
+	.project-container{
+		max-width: 1273px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+	.projects{
+		margin: 0px;
+	}
+	.highlight_p {
+    border-bottom: none;
+    height: auto;
+	}
+}
+
+@media screen and (min-width: 1680px) {
+	.banner{
+		height: 700px;
+	}
+}
+
+
+/*@media screen and (min-width: $break-small + 1) and (max-width: $break-medium - 1) {
+	
+	header{
+		width: 100%;
+	}
+
+}*/
 
