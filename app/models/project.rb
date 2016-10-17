@@ -16,6 +16,6 @@ class Project < ApplicationRecord
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
   scope :newest_article, ->{ limit(3).order("created_at DESC")}
-  scope :highlighted_article, ->{ where(:status => true)}
+  scope :highlighted_article, ->{ where(:status => true).limit(3)}
 
 end

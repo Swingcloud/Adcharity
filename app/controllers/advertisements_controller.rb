@@ -6,7 +6,7 @@ class AdvertisementsController < ApplicationController
 			@advertisement = Advertisement.find_by_randomize
     	cookies[:user_first_sign_up] = {
     		:value => @advertisement.id,
-    		:expires => 2.minutes.from_now
+    		:expires => 5.minutes.from_now
     	}
     else
       if current_user.unwatch_ad.count > 0

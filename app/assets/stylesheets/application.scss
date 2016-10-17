@@ -21,7 +21,11 @@
     left: 0;
     width: 100%;
     height: 100%;
+    /*border: solid 4px #37474F;*/
   }
+}
+iframe{
+  border: solid 4px #37474F;
 }
 
 @mixin project-pic-container{

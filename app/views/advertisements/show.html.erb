@@ -1,6 +1,62 @@
-	<div class="embed-container"> 
-		<%= embed_autoplay(@advertisement.ad_href) %> 
-	</div>
+<div class="embed-container"> 
+		<iframe id="inst-ad"
+        src="https://www.youtube.com/embed/<%=ad_href(@advertisement.ad_href)%>?enablejsapi=1&autoplay=1&controls=0"
+        frameborder="0"
+></iframe> 
+</div>
+
+	
 	<%= link_to('註冊', new_registration_path(:user)) %>
 	<%= link_to "登入 Facebook", user_facebook_omniauth_authorize_path %>
-	
+
+
+<script type="text/javascript">
+  var tag = document.createElement('script');
+  tag.src = 'https://www.youtube.com/iframe_api';
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('inst-ad', {
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+    });
+  }
+  function onPlayerReady(event) {
+    document.getElementById('inst-ad').style.borderColor = '#FF6D00';
+  }
+  // function changeBorderColor(playerStatus) {
+  //   var color;
+  //   if (playerStatus == -1) {
+  //     color = "#37474F"; // unstarted = gray
+  //   } else if (playerStatus == 0) {
+  //     color = "#FFFF00"; // ended = yellow
+  //   } else if (playerStatus == 1) {
+  //     color = "#33691E"; // playing = green
+  //   } else if (playerStatus == 2) {
+  //     color = "#DD2C00"; // paused = red
+  //   } else if (playerStatus == 3) {
+  //     color = "#AA00FF"; // buffering = purple
+  //   } else if (playerStatus == 5) {
+  //     color = "#FF6DOO"; // video cued = orange
+  //   }
+  //   if (color) {
+  //     document.getElementById('inst-ad').style.borderColor = color;
+  //   }
+  // }
+  function onPlayerStateChange(event) {
+    //incomplete must set data to 0
+    if (event.data == 2){
+      <% if current_user %>
+  	     document.location.href="<%= root_path %>";
+      <% else %> 
+        document.location.href="<%= project_path(params[:project_id]) %>"; 
+      <% end %>
+    
+    changeBorderColor(event.data);
+    }
+  }
+</script>
