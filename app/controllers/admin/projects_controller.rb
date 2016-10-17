@@ -29,7 +29,7 @@ class Admin::ProjectsController < ApplicationController
   private
 
   def params_permitted
-    params.require(:project).permit(:name, :description, :image, :institute_id, :short_text) 
+    params.require(:project).permit(:name, :description, :image, :institute_id, :short_text, :status) 
   end
 
   def find_project

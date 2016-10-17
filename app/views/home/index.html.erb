@@ -12,7 +12,7 @@
     </div>  
   </div>
   <div class="project-container">
-  	<% @projects.each do |p| %>
+  	<% @projects.highlighted_article.each do |p| %>
 			<%= render :partial => "projects/cell", :locals => {:p => p} %>
 	  <% end %>
   </div>

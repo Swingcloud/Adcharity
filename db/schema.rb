@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161014022341) do
+ActiveRecord::Schema.define(version: 20161016122943) do
 
   create_table "advertisements", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "ad_href"
@@ -47,17 +47,18 @@ ActiveRecord::Schema.define(version: 20161014022341) do
   end
 
   create_table "projects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",               limit: 20,    null: false
+    t.string   "name",               limit: 20,                    null: false
     t.text     "description",        limit: 65535
     t.integer  "donate_amount"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
     t.integer  "institute_id"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.text     "short_text",         limit: 65535
+    t.boolean  "status",                           default: false
     t.index ["name"], name: "index_projects_on_name", using: :btree
   end
 
