@@ -6,7 +6,7 @@ lock '3.6.1'
 set :application, 'ad_charity'
 
 set :repo_url, 'git@github.com:Swingcloud/Adcharity.git'
-set :deploy_to, '/home/deploy/ad_charity'
+
 set :keep_releases, 5
 append :linked_files, 'config/database.yml', 'config/secrets.yml','config/facebook.yml'
 # Default branch is :master
