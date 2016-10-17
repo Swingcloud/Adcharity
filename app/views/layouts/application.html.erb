@@ -28,7 +28,13 @@
           <ul class="ul-right">
             <li class="coop">與我們合作</li>
             <li>關於我們</li>
-            <li><%= link_to('登入', new_session_path(:user)) %> </li>
+            <li>
+              <% if current_user %>
+                <%= link_to('登出', destroy_user_session_path, :method => :delete) %>
+              <% else %>
+                <%= link_to('登入', new_session_path(:user)) %>
+              <% end %>
+            </li>
           </ul>  
         </div>    
       </div>    
@@ -43,15 +49,15 @@
 		    <%= flash[:alert] %>
 	  	</div>
 	  <% end %>
-	  <% if current_user %>
-    	<%= link_to('登出', destroy_user_session_path, :method => :delete) %>
-    	<%= link_to('修改密碼', edit_registration_path(:user)) %>
-  	<% else %>
-    	<%= link_to('註冊', new_registration_path(:user)) %> 
-    	<%= link_to('登入', new_session_path(:user)) %> 
-      <%= link_to "登入 Facebook", user_facebook_omniauth_authorize_path %>
-  	<% end %>
-    <%= link_to '回首頁', root_path %>
+	  <%# if current_user %>
+    	<%#= link_to('登出', destroy_user_session_path, :method => :delete) %>
+    	<%#= link_to('修改密碼', edit_registration_path(:user)) %>
+  	<%# else %>
+    	<%#= link_to('註冊', new_registration_path(:user)) %> 
+    	<%#= link_to('登入', new_session_path(:user)) %> 
+      <%#= link_to "登入 Facebook", user_facebook_omniauth_authorize_path %>
+  	<%# end %>
+    <%#= link_to '回首頁', root_path %>
     <%= yield %>
     <footer>
       <div class="footer-nav">
