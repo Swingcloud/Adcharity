@@ -30,15 +30,25 @@
             <li>關於我們</li>
             <li>
               <% if current_user %>
-                <%= link_to('登出', destroy_user_session_path, :method => :delete) %>
+                <%= link_to image_tag("user_icon_not_active.svg", :class => "svg"), "#",:id => "user_toggle" %>
               <% else %>
                 <%= link_to('登入', new_session_path(:user)) %>
               <% end %>
             </li>
           </ul>  
         </div>    
-      </div>    
+      </div>
+      <div class="user_triangle"></div>    
     </header>
+    <div class="user">
+      <ul class="user_context">
+        <li>Hi, XXX</li>
+        <li><a href="#">會員專區</a></li>
+        <li class="user_small_device"><a href="#">會員排行</a></li>
+        <li><a href="#">推薦專案</a></li>
+        <li><%= link_to('登出', destroy_user_session_path, :method => :delete) %></li>
+      </ul>
+    </div>
 	  <% if flash[:notice].present? %>
 	  	<div class="alert alert-success" role="alert">
 	    	<%= flash[:notice] %> 
@@ -84,3 +94,9 @@
     </footer>
   </body>
 </html>
+
+<script>
+
+
+
+</script>

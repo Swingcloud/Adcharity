@@ -5,16 +5,16 @@ $break-hd: 1440px;
 $header-hover-color: #999;
 
 *{
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   //border: solid 1px black;
   font-family: 'Noto Sans TC' ,sans-serif , Heiti TC , "Microsoft JhengHei";
   position: relative;
   font-size: 16px;
 }
 html,body{
-	height: 100%;
+  height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -33,7 +33,7 @@ html,body{
       img{
         position: absolute;
         left: 10px;
-    		top: -2px;
+        top: -2px;
       }
       .search_project{
         width: 100%;
@@ -50,7 +50,7 @@ html,body{
   }
 }
 header{
-	height: 63px;
+  height: 63px;
   .logo{
     top: 14px;
   }
@@ -69,17 +69,84 @@ header{
       letter-spacing: 2px;
       color: #4A4A4A;
       a{
-      	color: inherit;
-      	&:hover {
+        color: inherit;
+        &:hover {
         color: $header-hover-color;
         text-decoration: none;
-    		}
+        }
       }
     }
   }
   .ul-right{
     width: 70%;
-    right: 0;
+    right: 0;  
+  }
+}
+
+.svg {
+  top: -3px;
+  transition-duration: 0.5s;
+  path{
+    fill: #4a4a4a;
+  }
+  }
+.svg.svg_open{
+  path{
+    fill: #E15958;
+  }
+}
+.user.user_open{
+  border-top: solid 1px #E25958;
+  height: 69px;
+}
+.user_triangle {
+  position: absolute;
+  right: 11%;
+  bottom: -1px;
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  transition-duration: 0.5s;
+}
+.user_triangle.triangle_active {
+  border-bottom: 7px solid #e25958;
+}
+.user{
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  transition-duration: 0.5s; 
+  background-color: rgba(255,255,255,0.95);
+}
+.user_small_device{
+  display: none;
+}
+.user_context{
+  display: flex;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  li{
+    line-height: 69px;
+    width: 25vw;
+    a{
+      font-size: 16px;
+      letter-spacing: 2px;
+      color: #4A4A4A;
+      color: inherit;
+      padding: 2.5vh 0;
+      &:hover {
+        color: $header-hover-color;
+        text-decoration: none;
+      }
+    }
+    a.sign_out{
+      padding: 3.5vh 2.5vw;
+    }
+    
   }
 }
 .banner{
@@ -89,6 +156,7 @@ header{
   border-bottom: solid 2px #E25958;
   background-size: cover;
   background-position: top center;
+  z-index: -10;
 }
 .projects{
   height: 350px;
@@ -419,6 +487,69 @@ footer{
     border-bottom: none;
     height: auto;
 	}
+
+
+  .user.user_open{
+    border-top: solid 2px #E25958;
+    height: 210px;
+    //height: 69px;
+  }
+  .user_triangle {
+    position: absolute;
+    right: 5.5%;
+    bottom: 0;
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    transition-duration: 0.5s;
+  }
+  .user_triangle.triangle_active {
+    border-bottom: 7px solid #e25958;
+  }
+  .user_small_device{
+    display: block;
+  }
+  .user{
+    right: 0;  
+    position: absolute;
+    width: 180px;
+    height: 0px;
+    overflow: hidden;
+    transition-duration: 0.5s; 
+    background-color: rgba(255,255,255,0.95);
+  }
+  .user_context{
+    display: block;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    li{
+      width: auto;
+      text-align: center;
+      line-height: 40px;
+      font-size: 14px;
+      border-bottom: solid 1px #E6E6E6;
+      a{
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: #4A4A4A;
+        color: inherit;
+        padding-top: 2.5vh;
+        padding-bottom: 2.5vh;
+        padding-left: 53px;
+        padding-right: 53px;
+        &:hover {
+          color: $header-hover-color;
+          text-decoration: none;
+        }
+      }
+    }
+    a.sign_out{
+      padding: 2.5vh 70px;
+    }     
+  }
 }
 
 @media screen and (min-width: 900px) and (max-width: $break-large - 1) {

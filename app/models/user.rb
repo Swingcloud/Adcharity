@@ -70,9 +70,6 @@ class User < ApplicationRecord
     all_ad = Advertisement.all.map{|ad| ad.id}
     unwatch = all_ad - watch_ad
     return unwatch
-
-
-
   end
 
   # def watched_ad=(arr)
