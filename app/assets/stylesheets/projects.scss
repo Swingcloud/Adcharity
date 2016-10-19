@@ -1,3 +1,4 @@
+
 $light-black: #4A4A4A;
 $dark-black: #202020;
 $light-gray: #828282;
@@ -40,7 +41,7 @@ $border-color: #E6E6E6;
 		font-size: 16px;
 	}
 }
-.project-container{
+.project-container-show{
 	width: 88%;
 	margin: 0 auto;
 }
@@ -52,6 +53,7 @@ $border-color: #E6E6E6;
 
 .status-box{
 	text-align: center;
+	width: 100%;
 	h3{
 		margin-top: 15px;
 		margin-bottom: 15px;
@@ -103,7 +105,7 @@ $border-color: #E6E6E6;
 		}
 	}
 	a{
-		padding: 15px 69px;
+		padding: 15px 43px;
 		background-color: $button-red;
 		color: #fff;
 		border-radius: 4px;
@@ -124,13 +126,14 @@ $border-color: #E6E6E6;
 	margin-top: 35px;
 	ul{
 		display: flex;
+		justify-content: center;
 		text-align: center;
 		list-style: none;
 		margin: 0;
 		padding: 0;
 		li{
 			a{
-				padding: 10px 49px;
+				padding: 10px 37px;
 				border: 1px solid $weird-blue;
 				&:hover, &:active, &:focus{
 					color: white;
@@ -155,6 +158,7 @@ $border-color: #E6E6E6;
 	}
 }
 .project-down{
+
 	h1.pr-title{
 		text-align: center;
 		margin-top: 32px;
@@ -163,6 +167,14 @@ $border-color: #E6E6E6;
 		padding-bottom: 11px;
 		border-bottom: solid 2px $button-red;
 	}
+}
+
+.long_description{
+	width: 100%;
+}
+
+.as_you_write{
+	width: 100%;
 }
 
 

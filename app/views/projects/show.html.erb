@@ -7,7 +7,7 @@
 	<h3><%= @project.institute.name %> </h3>
 </div>
 <div class="project-top">
-	<div class="project-container">
+	<div class="project-container-show">
 		<div class="status-box">
 				<h3><%= @project.short_text%></h3>
 				<div class="project-progress-bar">
@@ -28,12 +28,12 @@
 						<h4>結束</h4>
 					</li>
 				</ul>
-				<%= link_to '我要支持專案，立即看廣告' , project_advertisement_path(@project, "watchAd"), :class => "watch_ad" %>
+				<%= link_to '我要支持專案，立即看廣告' , project_advertisement_path(@project, "watchAd"), :'data-turbolinks'=> false , :class => "watch_ad" %>
 		</div>
 	</div>
 </div>
 <div class="project-down">
-	<div class="project-container">
+	<div class="project-container-show">
 		<div class="long_description">
 			<div class="project-nav text-center">
 				<ul>
@@ -51,7 +51,7 @@
 			</div>
 		</div>
 
-		<div>
+		<div class="as_you_write">
 		<%= @project.name %>
 		<%= raw(@project.description) %>
 		</div>

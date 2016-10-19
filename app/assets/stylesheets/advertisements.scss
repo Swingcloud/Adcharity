@@ -1,3 +1,128 @@
-// Place all the styles related to the advertisements controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.ad-container{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	top: 35%;
+	transform: translateY(-50%);
+}
+
+.ad-desp{
+	text-align: center;
+	color: #E0E0E0;
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	transform: translateX(-50%) translateY(-50%);
+	h1{
+		margin-bottom: 8px;
+		font-size: 2em;
+		letter-spacing: 2.5px;
+		color: #E0E0E0;
+		font-weight: 500;
+	}
+	h2{
+		margin-top: 0px;
+		font-size: 1.5em;
+		color: #9E9B9B;
+		letter-spacing: 2px;
+	}
+}
+
+.project-desp{
+	text-align: center;
+	color: white;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	h3{
+		color: #9E9B9B;
+		font-size: 1.5em;
+		letter-spacing: 1.5px;
+	}
+	h1{
+		font-size: 2em;
+		letter-spacing: 2px;
+		color: #E0E0E0;
+	}
+	h4{
+		letter-spacing: 1.5px;
+		color: #E0E0E0;
+		font-size: 1.5em;
+
+	}
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*border: solid 4px #37474F;*/
+  }
+}
+
+
+.success-container{
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+	top: 30%;
+	ul{
+		list-style:none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		li{
+			padding-right: 1.5em;
+			img{
+				margin-top: 5px;
+			}
+		}
+	}
+	h1{
+		color: #E15958;
+		font-size: 3.5em;
+		letter-spacing: 3px;
+	}
+	h2{
+		letter-spacing: 2.5px;
+		font-size: 3em;
+	}
+	h3{
+		color: #929292;
+		font-size: 3em;
+		letter-spacing: 2.25px;
+		font-weight: 300;
+	}
+	h4{
+		color: #606060;
+		font-size: 2.5em;
+		letter-spacing: 2.25px;
+		font-weight: 400;
+	}
+	h5{
+		color: #606060;
+		font-size: 2.6em;
+		letter-spacing: 1.75px;
+		font-weight: 400;
+	}
+	.ad_money{
+		font-size: 5em;
+	}
+
+}
