@@ -2,7 +2,30 @@
 @import "bootstrap";
 @import "home";
 @import "admin/home";
+@import "projects";
 @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  //border: solid 1px black;
+  font-family: 'Noto Sans TC' ,sans-serif , Heiti TC , "Microsoft JhengHei";
+  position: relative;
+  font-size: 16px;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+
+
 
 .embed-container {
   position: relative;
