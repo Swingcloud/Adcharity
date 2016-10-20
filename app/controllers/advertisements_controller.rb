@@ -37,4 +37,8 @@ class AdvertisementsController < ApplicationController
     end
   end
 
+  def we_love_you
+    render :layout => "congrats"
+  end
+
 end

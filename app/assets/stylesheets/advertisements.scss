@@ -177,13 +177,40 @@
 			background-color: #949494;
 		}
 	}
-
-
-
-
-
-
-
-
-
+	&.thank{
+		width: 50%;
+		img{
+			width: 100%;
+		}
+		.success-action-btn{
+			width: 120%;
+			transform: translateX(-4%);
+			bottom: -210%;
+			a{
+				padding: 20px 155px;
+			}
+			a.see_another_ad{
+				padding: 20px 181px;
+			}
+			h3{
+				margin-top: 40%;
+				font-size: 2em;
+				color: #808080;
+				letter-spacing: 1.75px;
+				span{
+					font-size: 1em;
+					letter-spacing: 1.75px
+				}
+			}
+		}
+		.congrats_word{
+			top: -100%;
+			width: 110%;
+			transform: none;
+			h1{
+				padding-bottom: 17px;
+				left: 0;
+			}
+		}
+	}
 }
