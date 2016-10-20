@@ -18,7 +18,7 @@
 <div class="ad-container">
   <div class="embed-container"> 
   		<iframe id="inst-ad"
-          src="https://www.youtube.com/embed/<%=ad_href(@advertisement.ad_href)%>?enablejsapi=1&autoplay=1&controls=1"
+          src="https://www.youtube.com/embed/<%=ad_href(@advertisement.ad_href)%>?enablejsapi=1&autoplay=1&controls=0"
           frameborder="0"
   ></iframe> 
   </div>
@@ -75,14 +75,14 @@
   // }
   function onPlayerStateChange(event) {
     //incomplete must set data to 0
-    if (event.data == 0){
+    if (event.data == 2){
       <% if current_user %>
-  	    document.location.href="<%= congrats_path(:id=> @advertisement.id) %>";
+  	    document.location.href="<%=raw(congrats_path(:id=> @advertisement.id, :p_id =>@project.id)) %>";
       <% else %> 
-        document.location.href="<%= congrats_path(:id=> @advertisement.id) %>"; 
+        document.location.href="<%=raw(congrats_path(:id=> @advertisement.id, :p_id =>@project.id)) %>";
       <% end %>
     
-    changeBorderColor(event.data);
+    // changeBorderColor(event.data);
     }
   }
 </script>
