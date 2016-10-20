@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   	resources :advertisements, :only => :show
   end
   get "congrats" => "advertisements#congrats"
+  get "we_love_you" =>"advertisements#we_love_you"
 
   namespace :admin do 
   	resources :projects

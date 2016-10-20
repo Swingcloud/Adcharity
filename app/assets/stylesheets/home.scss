@@ -274,11 +274,11 @@ header{
 }
 .partner-container{
   text-align: center;
-  width: 230px;
+  width: 300px;
   margin: 0 auto;
   h1{
     margin-top: 26px;
-    margin-bottom: 14px;
+    margin-bottom: 31px;
     color: #7A7A7A;
     letter-spacing: 2.5px;
     font-weight: 400;
@@ -286,7 +286,10 @@ header{
   }
   img{
     margin-bottom: 20px;
-    width: 230px;
+    width: 120px;
+    height: auto;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 }
 .recommend{
@@ -295,7 +298,7 @@ header{
   border-bottom: solid 2px #E25958;
   h2{
     color: #7A7A7A;
-    padding-top: 35px;
+    padding-top: 15px;
     font-size: 14px;
     line-height: 22px;
     letter-spacing: 1.75px;
@@ -476,7 +479,7 @@ footer{
 
 
   .user.user_open{
-    border-top: solid 2px #E25958;
+    border-top: solid 1px #E25958;
     height: 210px;
     //height: 69px;
   }

@@ -78,51 +78,139 @@
 
 
 .success-container{
-	text-align: center;
-	width: 80%;
-	margin: 0 auto;
-	top: 30%;
-	ul{
-		list-style:none;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		li{
-			padding-right: 1.5em;
-			img{
-				margin-top: 5px;
-			}
-		}
-	}
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 40%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
 	h1{
 		color: #E15958;
-		font-size: 3.5em;
+		font-size: 4em;
 		letter-spacing: 3px;
+		font-weight: 300;
+		left: 3%;
 	}
 	h2{
 		letter-spacing: 2.5px;
-		font-size: 3em;
+		font-size: 3.5em;
+		font-weight: 300;
 	}
 	h3{
 		color: #929292;
 		font-size: 3em;
 		letter-spacing: 2.25px;
-		font-weight: 300;
+		font-weight: 200;
+		margin-bottom: 30px;
 	}
 	h4{
 		color: #606060;
-		font-size: 2.5em;
+		font-size: 2.8em;
 		letter-spacing: 2.25px;
-		font-weight: 400;
+		font-weight: 300;
+		margin-bottom: 30px;
 	}
 	h5{
 		color: #606060;
-		font-size: 2.6em;
+		font-size: 2.4em;
 		letter-spacing: 1.75px;
-		font-weight: 400;
+		font-weight: 300;
 	}
 	.ad_money{
-		font-size: 5em;
+		font-size: 10em;
+		color: #606060;
+		font-weight: 400;
 	}
+}
 
+.ad_money{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	.congrats_word{
+		position: absolute;
+    top: -83%;
+    width: 462%;
+    text-align: center;
+    transform: translateX(-36%);
+	}
+	.ntd{
+		position: absolute;
+    top: 33%;
+    left: -125%;
+	}
+	.money_sign{
+		position: absolute;
+		top: 36%;
+    right: -90%;
+		img{
+			width: 220%;
+			height: auto;
+		}
+	}
+	.support_int{
+		position: absolute;
+		width: 770%;
+    text-align: center;
+    transform: translateX(-44%);
+	}
+	.success-action-btn{
+		position: absolute;
+		position: absolute;
+    width: 770%;
+    bottom: -245%;
+    transform: translateX(-39%);
+		a{
+			display: inline-block;
+    	text-decoration: none;
+    	color: white;
+    	font-size: 3em;
+    	letter-spacing: 2.25px;
+    	font-weight: 300;
+    	padding: 20px 130px;
+    	background-color: #E15958;
+    	border-radius: 10px;
+    	margin-bottom: 34px;
+		}
+		a.see_another_ad{
+			background-color: #949494;
+		}
+	}
+	&.thank{
+		width: 50%;
+		img{
+			width: 100%;
+		}
+		.success-action-btn{
+			width: 120%;
+			transform: translateX(-4%);
+			bottom: -210%;
+			a{
+				padding: 20px 155px;
+			}
+			a.see_another_ad{
+				padding: 20px 181px;
+			}
+			h3{
+				margin-top: 40%;
+				font-size: 2em;
+				color: #808080;
+				letter-spacing: 1.75px;
+				span{
+					font-size: 1em;
+					letter-spacing: 1.75px
+				}
+			}
+		}
+		.congrats_word{
+			top: -100%;
+			width: 110%;
+			transform: none;
+			h1{
+				padding-bottom: 17px;
+				left: 0;
+			}
+		}
+	}
 }

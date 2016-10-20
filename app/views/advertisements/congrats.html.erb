@@ -2,28 +2,35 @@
   <%= image_tag("X.svg")%>
 </div>
 <div class="success-container">
-	<h1>
-		恭喜您！
-	</h1>
-	<h2>
-		您已獲得廣告金
-	</h2>
-	<div class="success-price">
-		<ul>
-			<li><h3>NT</h3></li>
-			<li><span class="ad_money"> 3 </span></li>
-			<li><%= image_tag("money.svg")%></li> 
-		</ul>
+  <div class="ad_money"> 3 
+		<div class="congrats_word">
+			<h1>
+				恭喜您！
+			</h1>
+			<h2>
+				您已獲得廣告金
+			</h2>
+		</div>
+		<div class="ntd">
+			<h3>NT</h3>
+		</div>
+		<div class="money_sign">
+			<%= image_tag("money.svg")%>
+		</div>
+		<div class="support_int">
+			<h3>
+				您目前支持的專案為：
+			</h3>
+			<h4>
+				關懷生命協會
+			</h4>
+			<h5>
+				關懷生命，2016友善動物勸募計畫
+			</h5>
+		</div>
+		<div class="success-action-btn">
+			<%= link_to "確定捐出廣告金", we_love_you_path ,:'data-turbolinks'=> false,:class=>"put_money" %><br>
+			<a href="#" class="see_another_ad">繼續看更多廣告</a>
+		</div>
 	</div>
-	<h3>
-		您目前支持的專案為：
-	</h3>
-	<h4>
-		關懷生命協會
-	</h4>
-	<h5>
-		關懷生命，2016友善動物勸募計畫
-	</h5>
-	<a href="#" class="put_money">確定捐出廣告金</a><br>
-	<a href="#" class="see_another_ad">繼續看更多廣告</a>
 </div>
