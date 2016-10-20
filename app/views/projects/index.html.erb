@@ -1,0 +1,40 @@
+<div class="project-category">
+  <ul>
+    <li><a href="#">動物保育<span>5</span></a></li>
+    <li><a href="#">獨居老人<span>4</span></a></li>
+    <li><a href="#">罕見疾病<span>8</span></a></li>
+    <li><a href="#">身心障礙<span>9</span></a></li>
+  </ul>
+</div>
+<div class="highlight_p all_projects highlighted">
+  <div class="desp project-index">
+    <div class="highlight_p_title">
+      <h2><%= image_tag "Group.svg" %>
+      焦點專案</h2>
+    </div> 
+  </div>
+  <div class="project-container">
+  	<% @projects.highlighted_article.each do |p| %>
+			<%= render :partial => "projects/cell", :locals => {:p => p} %>
+	  <% end %>
+  </div>
+</div>
+<div class="highlight_p all_projects">
+  <div class="desp project-index">
+    <div class="highlight_p_title">
+      <h2><%= image_tag "Group.svg" %>
+      最新專案</h2>
+    </div> 
+  </div>
+  <div class="project-container">
+    <% @projects.newest_article.each do |p| %>
+      <%= render :partial => "projects/cell", :locals => {:p => p} %>
+    <% end %>
+  </div>
+</div>
+
+<div class="see_more_projects">
+  <div class="recommend-container">
+    <a href="#">看更多專案</a>
+  </div>
+</div>
