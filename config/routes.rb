@@ -9,7 +9,8 @@ Rails.application.routes.draw do
 
   namespace :admin do 
   	resources :projects
-    resource :advertisements
+    resources :advertisements
+    resources :institutes
   	root "home#index", :controller => "home"
   end
 	root to: "home#index" , :controller => "home"

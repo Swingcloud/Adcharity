@@ -10,7 +10,7 @@ class Admin::ProjectsController < ApplicationController
   def create
     @project=Project.new(params_permitted)
     @project.save!
-    redirect_to admin_projects_path
+    redirect_to admin_root_path
   end
 
   def edit 
