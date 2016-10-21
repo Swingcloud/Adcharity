@@ -22,15 +22,16 @@ class Project < ApplicationRecord
   scope :highlighted_article, ->{ where(:status => true).order("created_at DESC").limit(3)}
 
   scope :find_category, ->(category) { where( :category =>  category) }
+  scope :check_expired, ->{where( "deadline > ?" ,  Time.current-86400)}
 
   CATEGORY = %w[動物保育 獨居老人 罕見疾病 身心障礙]
 
 
-
   def days_left
-    days =  ( self.deadline - Time.now) / 86400 
-    days =  (days + 1).to_i 
+    days =  ( self.deadline.end_of_day - (Time.now - 86400) ) / 86400 
+    days =  days.to_i 
     return days
   end
+
 
 end

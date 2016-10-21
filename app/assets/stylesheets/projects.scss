@@ -8,6 +8,7 @@ $border-color: #E6E6E6;
 
 
 .project-header{
+	z-index: -1000;
 	text-align: center;
 	border-bottom: solid 1px $border-color;
 	.project-header-img{
@@ -124,10 +125,11 @@ $border-color: #E6E6E6;
 	}
 }
 .project-progress-bar-finished{
-	width: 80%;
+	width: 0;
 	height: 7.71px;
 	background-color: $weird-blue;
 	border-radius: 2px;
+	transition: 0.8s;
 }
 
 .project-nav{

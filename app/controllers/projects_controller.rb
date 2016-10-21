@@ -5,10 +5,10 @@ class ProjectsController < ApplicationController
 	end
 
 	def index
-		@projects=Project.all
+		@projects=Project.check_expired
 
 		if params[:category]
-			@projects=Project.find_category(params[:category])
+			@projects=Project.check_expired.find_category(params[:category])
 		end
 		
 	end
