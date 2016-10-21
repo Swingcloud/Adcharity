@@ -7,32 +7,33 @@
 <div class="exit-btn">
   <%= image_tag("X.svg")%>
 </div>
-<div class="ad-desp">
-  <h1>
-    鮮乳坊
-  </h1>
-  <h2>
-    看完影片即可獲取廣告金
-  </h2>
-</div>
+
 <div class="ad-container">
+    <div class="ad-desp">
+      <h1>
+        鮮乳坊
+      </h1>
+      <h2>
+        看完影片即可獲取廣告金
+      </h2>
+    </div>
+    <div class="project-desp">
+      <h3>
+        您目前所支持的公益機構：
+      </h3>
+      <h1>
+        關懷生命協會
+      </h1>
+      <h4>
+        關懷生命，2016友善動物勸募計畫
+      </h4>
+    </div>
   <div class="embed-container"> 
   		<iframe id="inst-ad"
           src="https://www.youtube.com/embed/<%=ad_href(@advertisement.ad_href)%>?enablejsapi=1&autoplay=1&controls=0"
           frameborder="0"
   ></iframe> 
   </div>
-</div>
-<div class="project-desp">
-  <h3>
-    您目前所支持的公益機構：
-  </h3>
-  <h1>
-    關懷生命協會
-  </h1>
-  <h4>
-    關懷生命，2016友善動物勸募計畫
-  </h4>
 </div>
 
 

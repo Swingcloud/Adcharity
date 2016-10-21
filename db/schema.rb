@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161019121006) do
+ActiveRecord::Schema.define(version: 20161021020902) do
 
   create_table "advertisements", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "ad_href"
@@ -63,6 +63,9 @@ ActiveRecord::Schema.define(version: 20161019121006) do
     t.datetime "image_updated_at"
     t.text     "short_text",         limit: 65535
     t.boolean  "status",                           default: false
+    t.datetime "deadline"
+    t.string   "category"
+    t.index ["category"], name: "index_projects_on_category", using: :btree
     t.index ["name"], name: "index_projects_on_name", using: :btree
   end
 

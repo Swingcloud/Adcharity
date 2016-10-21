@@ -9,19 +9,34 @@ class Admin::ProjectsController < ApplicationController
 
   def create
     @project=Project.new(params_permitted)
-    @project.save!
-    redirect_to admin_root_path
+    if @project.save
+      redirect_to admin_root_path
+    else
+      render :action => :new
+    end
   end
+
 
   def edit 
     @institutes=Institute.all
   end
 
   def update
-    @project.update(params_permitted)
-    flash[:notice]="編輯成功"
-    redirect_to admin_projects_path
+    @institutes=Institute.all
+    if params[:remove_upload_file] == "1"
+      @post.image = nil
+    end
+
+
+    if @project.update(params_permitted)
+      flash[:notice]="編輯成功"
+      redirect_to project_path(@project)
+    else 
+      render :action => :edit
+    end
+
   end
+
 
 
 
@@ -29,7 +44,7 @@ class Admin::ProjectsController < ApplicationController
   private
 
   def params_permitted
-    params.require(:project).permit(:name, :description, :image, :institute_id, :short_text, :status) 
+    params.require(:project).permit(:name, :description, :image, :institute_id, :short_text, :status,:donate_amount, :deadline, :category ) 
   end
 
   def find_project

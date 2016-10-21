@@ -1,61 +1,66 @@
 
 
 .ad-container{
-	position: absolute;
 	width: 100%;
 	height: auto;
-	top: 35%;
+	top: 45%;
 	transform: translateY(-50%);
+	text-align: center;
 }
 
 .ad-desp{
 	text-align: center;
 	color: #E0E0E0;
+	width:100%;
 	position: absolute;
+	top: -20%;
 	left: 50%;
-	top: 10%;
 	transform: translateX(-50%) translateY(-50%);
 	h1{
 		margin-bottom: 8px;
-		font-size: 2em;
+		font-size: 20px;
 		letter-spacing: 2.5px;
 		color: #E0E0E0;
 		font-weight: 500;
 	}
 	h2{
 		margin-top: 0px;
-		font-size: 1.5em;
+		font-size: 16px;
 		color: #9E9B9B;
 		letter-spacing: 2px;
 	}
 }
 
 .project-desp{
+	width:100%;
 	text-align: center;
 	color: white;
 	position: absolute;
-	top: 60%;
+	bottom: -75%;
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
 	h3{
 		color: #9E9B9B;
-		font-size: 1.5em;
+		font-size: 12px;
 		letter-spacing: 1.5px;
+		font-weight: 300;
 	}
 	h1{
-		font-size: 2em;
+		font-size: 22px;
 		letter-spacing: 2px;
 		color: #E0E0E0;
+		font-weight: 300;
 	}
 	h4{
 		letter-spacing: 1.5px;
 		color: #E0E0E0;
-		font-size: 1.5em;
-
+		font-size: 12px;
+		font-weight: 300;
 	}
 }
 
 .embed-container {
+	position: absolute;
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 30px;
@@ -81,71 +86,74 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	top: 40%;
+	top: 35%;
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
 	h1{
 		color: #E15958;
-		font-size: 4em;
+		font-size: 24px;
 		letter-spacing: 3px;
 		font-weight: 300;
 		left: 3%;
 	}
 	h2{
 		letter-spacing: 2.5px;
-		font-size: 3.5em;
+		font-size: 20px;
 		font-weight: 300;
 	}
 	h3{
 		color: #929292;
-		font-size: 3em;
+		font-size: 18px;
 		letter-spacing: 2.25px;
 		font-weight: 200;
-		margin-bottom: 30px;
+		margin-bottom: 10px;
 	}
 	h4{
 		color: #606060;
-		font-size: 2.8em;
+		font-size: 18px;
 		letter-spacing: 2.25px;
 		font-weight: 300;
-		margin-bottom: 30px;
+		margin-bottom: 9px;
 	}
 	h5{
 		color: #606060;
-		font-size: 2.4em;
+		font-size: 15px;
 		letter-spacing: 1.75px;
 		font-weight: 300;
 	}
 	.ad_money{
-		font-size: 10em;
+		font-size: 72px;
 		color: #606060;
 		font-weight: 400;
+	}
+	&.thank{
+		top:43%;
 	}
 }
 
 .ad_money{
 	position: absolute;
-	top: 50%;
+	top: 20%;
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
 	.congrats_word{
 		position: absolute;
     top: -83%;
-    width: 462%;
+    width: 400%;
     text-align: center;
-    transform: translateX(-36%);
+    transform: translateX(-40%);
 	}
 	.ntd{
 		position: absolute;
-    top: 33%;
+    top: 25%;
     left: -125%;
 	}
 	.money_sign{
 		position: absolute;
-		top: 36%;
-    right: -90%;
+		top: 37%;
+    right: -130%;
 		img{
-			width: 220%;
+			width: 100%;
 			height: auto;
 		}
 	}
@@ -158,43 +166,48 @@
 	.success-action-btn{
 		position: absolute;
 		position: absolute;
-    width: 770%;
-    bottom: -245%;
-    transform: translateX(-39%);
+    width: 649%;
+    bottom: -237%;
+    transform: translateX(-43%);
 		a{
 			display: inline-block;
     	text-decoration: none;
     	color: white;
-    	font-size: 3em;
+    	font-size: 18px;
     	letter-spacing: 2.25px;
     	font-weight: 300;
-    	padding: 20px 130px;
+    	padding: 15px 58px;
     	background-color: #E15958;
-    	border-radius: 10px;
-    	margin-bottom: 34px;
+    	border-radius: 4px;
+    	margin-bottom: 11px;
 		}
 		a.see_another_ad{
 			background-color: #949494;
 		}
 	}
 	&.thank{
-		width: 50%;
+		width: 177px;
 		img{
 			width: 100%;
 		}
 		.success-action-btn{
-			width: 120%;
-			transform: translateX(-4%);
-			bottom: -210%;
+			width: 145%;
+			transform: translateX(-12%);
+			bottom: -125%;
 			a{
-				padding: 20px 155px;
+				padding: 15px 77px;
 			}
 			a.see_another_ad{
-				padding: 20px 181px;
+				padding: 15px 87px;
 			}
+		}
+		.accum{
+			width: 145%;
+			position: absolute;
+			bottom: -180%;
+			transform: translateX(-10%);
 			h3{
-				margin-top: 40%;
-				font-size: 2em;
+				font-size: 14px;
 				color: #808080;
 				letter-spacing: 1.75px;
 				span{
@@ -204,13 +217,42 @@
 			}
 		}
 		.congrats_word{
-			top: -100%;
-			width: 110%;
-			transform: none;
+			top: -115%;
+			width: 130%;
+			transform: translate(-10%);
 			h1{
-				padding-bottom: 17px;
 				left: 0;
+			}
+			h2{
+				margin: 5px 0px;
+				color: #606060;
 			}
 		}
 	}
 }
+/*
+@media screen and (max-width: 320px){
+	.ad_money.thank{
+		.success-action-btn{
+			width: 649%;
+			transform: translateX(-10%);
+			bottom: -200%;
+			a{
+				padding: 15px 75px;
+			}
+			a.see_another_ad{
+				padding: 15px 86px;
+			}
+			h3{
+				margin-top: 75px;
+				font-size: 14px;
+				color: #808080;
+				letter-spacing: 1.75px;
+				span{
+					font-size: 1em;
+					letter-spacing: 1.75px
+				}
+			}
+		}
+	}
+}*/
