@@ -27,7 +27,6 @@ class AdvertisementsController < ApplicationController
       @project= Project.find(params[:p_id])
       UserAdship.create!( :user_id => current_user.id , :advertisement_id => @advertisement.id)
       if !current_user.projects.exists?(params[:p_id])
-        current_user.projects << @project
         current_user.user_projectships.update(:status => false)
         UserProjectship.create( :user_id => current_user.id , :project_id => params[:p_id], :status => true)
       else
