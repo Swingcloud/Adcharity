@@ -20,7 +20,7 @@ class Admin::ProjectsController < ApplicationController
   def update
     @project.update(params_permitted)
     flash[:notice]="編輯成功"
-    redirect_to admin_projects_path
+    redirect_to admin_root_path
   end
 
 
@@ -29,7 +29,7 @@ class Admin::ProjectsController < ApplicationController
   private
 
   def params_permitted
-    params.require(:project).permit(:name, :description, :image, :institute_id, :short_text, :status) 
+    params.require(:project).permit(:name, :description, :image, :institute_id, :short_text, :status,:donate_amount, :deadline) 
   end
 
   def find_project

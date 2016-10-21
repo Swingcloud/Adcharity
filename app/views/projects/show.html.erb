@@ -16,8 +16,8 @@
 				</div>
 				<ul>
 					<li>
-						<h2>$ 34,567</h2>
-						<h4>目標金額 <%= @project.donate_amount %></h4>
+						<h2>$ <%= number_with_delimiter(@project.donate_amount, :delimiter => ',' )%></h2>
+						<h4>目標金額 </h4>
 					</li>
 					<li>
 						<h2>87<span>人</span></h2>

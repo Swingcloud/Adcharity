@@ -18,4 +18,10 @@ class Project < ApplicationRecord
   scope :newest_article, ->{ limit(3).order("created_at DESC")}
   scope :highlighted_article, ->{ where(:status => true).limit(3)}
 
+  def days_left
+    days =  ( self.deadline - Time.now) / 86400 
+    days =  (days + 1).to_i 
+    return days
+  end
+
 end
