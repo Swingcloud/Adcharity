@@ -1,7 +1,9 @@
 <div class="project-header">
 	<div class="project-header-img">
 		<%= image_tag @project.image.url%>
-		<div class="project-institute-img"></div>
+		<div class="project-institute-img">
+			<%= image_tag @project.institute.icon.url %>
+		</div>
 	</div>
 	<h1><%= @project.name %></h1>
 	<h3><%= @project.institute.name %> </h3>
@@ -20,11 +22,11 @@
 						<h4>目標金額 </h4>
 					</li>
 					<li>
-						<h2>87<span>人</span></h2>
+						<h2><%=@project.users.count%><span>人</span></h2>
 						<h4>支持</h4>
 					</li>
 					<li>
-						<h2>87<span>天</span></h2>
+						<h2><%= @project.days_left %><span>天</span></h2>
 						<h4>結束</h4>
 					</li>
 				</ul>

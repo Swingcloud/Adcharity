@@ -1,9 +1,37 @@
 <div class="project-category">
   <ul>
-    <li><a href="#">動物保育<span>5</span></a></li>
-    <li><a href="#">獨居老人<span>4</span></a></li>
-    <li><a href="#">罕見疾病<span>8</span></a></li>
-    <li><a href="#">身心障礙<span>9</span></a></li>
+    <li>
+      <%= link_to projects_path(:category => "動物保育") do %>
+        動物保育
+        <span>
+          <%= Project.all.where(:category => "動物保育").count %>
+        </span>
+      <%end %>  
+    </li>
+    <li>
+      <%= link_to projects_path(:category => "獨居老人") do %>
+        獨居老人
+        <span>
+          <%= Project.all.where(:category => "獨居老人").count %> 
+        </span>
+      <%end %>
+    </li>
+    <li>
+      <%= link_to projects_path(:category => "罕見疾病") do %>
+        罕見疾病
+        <span>
+          <%= Project.all.where(:category => "罕見疾病").count %> 
+        </span>
+      <%end %>
+    </li>
+    <li>
+      <%= link_to projects_path(:category => "身心障礙") do %>
+        身心障礙
+        <span>
+          <%= Project.all.where(:category => "身心障礙").count %> 
+        </span>
+      <%end %>
+    </li>
   </ul>
 </div>
 <div class="highlight_p all_projects highlighted">

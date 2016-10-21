@@ -6,6 +6,11 @@ class ProjectsController < ApplicationController
 
 	def index
 		@projects=Project.all
+
+		if params[:category]
+			@projects=Project.find_category(params[:category])
+		end
+		
 	end
 
 
