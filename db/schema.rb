@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161021020902) do
+ActiveRecord::Schema.define(version: 20161022110418) do
 
   create_table "advertisements", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "ad_href"
@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(version: 20161021020902) do
   create_table "user_projectships", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
     t.integer  "project_id"
-    t.integer  "total_donation"
+    t.integer  "total_donation", default: 0
     t.boolean  "status",         default: false
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false

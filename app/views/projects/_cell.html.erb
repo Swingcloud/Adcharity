@@ -12,12 +12,12 @@
 	        	<h3><%= p.institute.name %></h3>
 	        </div>
 	        <div class="progress-bar">
-	          <div class="progress-bar-finished" style="width: <%=(p.users.count.to_f * 3 / p.donate_amount ) *  285 %>px">
+	          <div class="progress-bar-finished" style="width: <%=(p.donate_count.to_f * 3 / p.donate_amount ) *  285 %>px">
 	          </div>
 	        </div>
 	        <div class="money clear-fix">
 	          <p>金額
-	            <span class="accum"><%=(p.users.count) *3%></span>
+	            <span class="accum"><%=(p.donate_count)%></span>
 	            <span class="total"> / <%= p.donate_amount %></span>
 	          </p>
 	        </div>

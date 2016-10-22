@@ -28,10 +28,11 @@ class AdvertisementsController < ApplicationController
       UserAdship.create!( :user_id => current_user.id , :advertisement_id => @advertisement.id)
       if !current_user.projects.exists?(params[:p_id])
         current_user.user_projectships.update(:status => false)
-        UserProjectship.create( :user_id => current_user.id , :project_id => params[:p_id], :status => true)
+        UserProjectship.create( :user_id => current_user.id , :project_id => params[:p_id], :status => true, :total_donation => 3)
       else
         current_user.user_projectships.update(:status => false)
-        current_user.user_projectships.find_by_project_id(params[:p_id]).update( :status => true)
+        donate_prize = current_user.user_projectships.find_by_project_id(params[:p_id]).total_donation += 3
+        current_user.user_projectships.find_by_project_id(params[:p_id]).update( :status => true, :total_donation => donate_prize)
       end 
     end
   end

@@ -33,5 +33,13 @@ class Project < ApplicationRecord
     return days
   end
 
+  def donate_count
+    amount = 0 
+    self.user_projectships.each do |u|
+      amount += u.total_donation 
+    end
+    amount
+  end
+
 
 end

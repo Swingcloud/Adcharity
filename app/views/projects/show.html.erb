@@ -57,8 +57,7 @@
 
 <script>
 	$(document).on('turbolinks:load', function(){
-		console.log(<%=((@project.users.count.to_f) * 3/ @project.donate_amount) * 100 %>);
-		$('.project-progress-bar-finished').css("width","<%=((@project.users.count.to_f) * 3/ @project.donate_amount) * 100 %>%");
+		$('.project-progress-bar-finished').css("width","<%=((@project.donate_count.to_f) * 3/ @project.donate_amount) * 100 %>%");
 		});
 </script>
 
