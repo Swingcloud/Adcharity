@@ -82,6 +82,10 @@ class User < ApplicationRecord
     amount
   end
 
+  def user_email_name
+    name = self.email.split('@').first
+  end
+
   # def watched_ad=(arr)
   #   ids = arr.map do |ad_id|
   #     ad_id = tag_name.strip.downcase

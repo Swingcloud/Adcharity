@@ -79,6 +79,7 @@ body#ad.congrats{
   height: 69px;
   line-height: 69px;
   text-align: center;
+  padding: 0;
 }
 
 
@@ -120,3 +121,15 @@ $box_height:200px;
   border:solid 5px $color_main;
   background-color: $color_background;
 }
+
+/*@keyframes ani3{
+  0%{
+    transform: scale(0);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  100%{
+    transform: scale(1);
+    
+  }
+
+}*/

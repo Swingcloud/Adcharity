@@ -22,6 +22,7 @@ gem 'ckeditor'
 gem "koala", "~> 2.2"
 gem 'capistrano-rails', :group => :development
 gem 'capistrano-passenger', :group => :development
+gem "rails-i18n"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
