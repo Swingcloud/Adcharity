@@ -72,6 +72,16 @@ class User < ApplicationRecord
     return unwatch
   end
 
+
+
+  def user_donate_count
+    amount = 0 
+    self.user_projectships.each do |p|
+      amount += p.total_donation 
+    end
+    amount
+  end
+
   # def watched_ad=(arr)
   #   ids = arr.map do |ad_id|
   #     ad_id = tag_name.strip.downcase

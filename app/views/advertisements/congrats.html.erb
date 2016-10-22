@@ -30,7 +30,12 @@
 		</div>
 		<div class="success-action-btn">
 			<%= link_to "確定捐出廣告金", we_love_you_path ,:'data-turbolinks'=> false,:class=>"put_money" %><br>
-			<a href="#" class="see_another_ad">繼續看更多廣告</a>
+			<%if current_user.unwatch_ad.count > 0 %>
+			<%= link_to '繼續看更多廣告' , project_advertisement_path(session[:focus_project], "watchAd"), :'data-turbolinks'=> false , :class => "see_another_ad" %>
+			<% end %>
+		</div>
+		<div class="ad_amount">
+			<h3>您目前已獲得的廣告金額為：<span><%= session[:ad_count]%></span>元</h3>
 		</div>
 	</div>
 </div>
