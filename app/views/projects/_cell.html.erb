@@ -12,17 +12,17 @@
 	        	<h3><%= p.institute.name %></h3>
 	        </div>
 	        <div class="progress-bar">
-	          <div class="progress-bar-finished">
+	          <div class="progress-bar-finished" style="width: <%=(p.donate_count.to_f * 3 / p.donate_amount ) *  285 %>px">
 	          </div>
 	        </div>
 	        <div class="money clear-fix">
 	          <p>金額
-	            <span class="accum">12,342</span>
-	            <span class="total"> / 15000</span>
+	            <span class="accum"><%=(p.donate_count)%></span>
+	            <span class="total"> / <%= p.donate_amount %></span>
 	          </p>
 	        </div>
 	        <div class="days">
-	          <p>剩 12 天</p>
+	          <p>剩 <%= p.days_left %> 天</p>
 	        </div>
 	      </div>
 	    </div>

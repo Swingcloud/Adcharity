@@ -1,3 +1,273 @@
-// Place all the styles related to the advertisements controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.ad-container{
+	width: 100%;
+	height: auto;
+	top: 45%;
+	transform: translateY(-50%);
+	text-align: center;
+}
+
+.ad-desp{
+	text-align: center;
+	color: #E0E0E0;
+	width:100%;
+	position: absolute;
+	top: -20%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	h1{
+		margin-bottom: 8px;
+		font-size: 20px;
+		letter-spacing: 2.5px;
+		color: #E0E0E0;
+		font-weight: 500;
+	}
+	h2{
+		margin-top: 0px;
+		font-size: 16px;
+		color: #9E9B9B;
+		letter-spacing: 2px;
+	}
+}
+
+.project-desp{
+	width:100%;
+	text-align: center;
+	color: white;
+	position: absolute;
+	bottom: -75%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	h3{
+		color: #9E9B9B;
+		font-size: 12px;
+		letter-spacing: 1.5px;
+		font-weight: 300;
+	}
+	h1{
+		font-size: 22px;
+		letter-spacing: 2px;
+		color: #E0E0E0;
+		font-weight: 300;
+	}
+	h4{
+		letter-spacing: 1.5px;
+		color: #E0E0E0;
+		font-size: 12px;
+		font-weight: 300;
+	}
+}
+
+.embed-container {
+	position: absolute;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*border: solid 4px #37474F;*/
+  }
+}
+
+
+.success-container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 35%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	h1{
+		color: #E15958;
+		font-size: 24px;
+		letter-spacing: 3px;
+		font-weight: 300;
+		left: 3%;
+	}
+	h2{
+		letter-spacing: 2.5px;
+		font-size: 20px;
+		font-weight: 300;
+	}
+	h3{
+		color: #929292;
+		font-size: 18px;
+		letter-spacing: 2.25px;
+		font-weight: 200;
+		margin-bottom: 10px;
+	}
+	h4{
+		color: #606060;
+		font-size: 18px;
+		letter-spacing: 2.25px;
+		font-weight: 300;
+		margin-bottom: 9px;
+	}
+	h5{
+		color: #606060;
+		font-size: 15px;
+		letter-spacing: 1.75px;
+		font-weight: 300;
+	}
+	.ad_money{
+		font-size: 72px;
+		color: #606060;
+		font-weight: 400;
+	}
+	&.thank{
+		top:43%;
+	}
+}
+
+.ad_money{
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	.congrats_word{
+		position: absolute;
+    top: -83%;
+    width: 400%;
+    text-align: center;
+    transform: translateX(-40%);
+	}
+	.ntd{
+		position: absolute;
+    top: 25%;
+    left: -125%;
+	}
+	.money_sign{
+		position: absolute;
+		top: 37%;
+    right: -130%;
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	.support_int{
+		position: absolute;
+		width: 770%;
+    text-align: center;
+    transform: translateX(-44%);
+	}
+	.success-action-btn{
+		position: absolute;
+		position: absolute;
+    width: 649%;
+    bottom: -237%;
+    transform: translateX(-43%);
+		a{
+			display: inline-block;
+    	text-decoration: none;
+    	color: white;
+    	font-size: 18px;
+    	letter-spacing: 2.25px;
+    	font-weight: 300;
+    	padding: 15px 58px;
+    	background-color: #E15958;
+    	border-radius: 4px;
+    	margin-bottom: 11px;
+		}
+		a.see_another_ad{
+			background-color: #949494;
+		}
+	}
+	&.thank{
+		width: 177px;
+		img{
+			width: 100%;
+		}
+		.success-action-btn{
+			width: 145%;
+			transform: translateX(-12%);
+			bottom: -125%;
+			a{
+				padding: 15px 77px;
+			}
+			a.see_another_ad{
+				padding: 15px 87px;
+			}
+		}
+		.we_love_you_accum{
+			width: 145%;
+			position: absolute;
+			bottom: -180%;
+			transform: translateX(-10%);
+			h3{
+				font-size: 14px;
+				color: #808080;
+				letter-spacing: 1.75px;
+				span{
+					font-size: 1em;
+					letter-spacing: 1.75px;
+					color: #5EB8CD;
+				}
+			}
+		}
+		.congrats_word{
+			top: -115%;
+			width: 130%;
+			transform: translate(-10%);
+			h1{
+				left: 0;
+			}
+			h2{
+				margin: 5px 0px;
+				color: #606060;
+			}
+		}
+	}
+}
+
+.ad_amount{
+	position: absolute;
+  width: 649%;
+  transform: translateX(-41%);
+  bottom: -270%;
+  h3{
+  	font-size: 14px;
+  	letter-spacing: 1.75px;
+  	span{
+  		color: #E15958;
+  	}
+  }
+}
+/*
+@media screen and (max-width: 320px){
+	.ad_money.thank{
+		.success-action-btn{
+			width: 649%;
+			transform: translateX(-10%);
+			bottom: -200%;
+			a{
+				padding: 15px 75px;
+			}
+			a.see_another_ad{
+				padding: 15px 86px;
+			}
+			h3{
+				margin-top: 75px;
+				font-size: 14px;
+				color: #808080;
+				letter-spacing: 1.75px;
+				span{
+					font-size: 1em;
+					letter-spacing: 1.75px
+				}
+			}
+		}
+	}
+}*/

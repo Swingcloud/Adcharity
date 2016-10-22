@@ -14,7 +14,7 @@
   </div>
 </div>
 <div class="text-center">
-  <%= link_to '新增廣告', new_admin_advertisements_path %>
+  <%= link_to '新增廣告', new_admin_advertisement_path %>
 </div>
 <h2 class="text-center">專案列表</h2>
 <div class="container">
@@ -31,6 +31,7 @@
             </div>
           </li>
           <li><%= link_to'詳細專案', project_path(p) %> </li>
+          <li><%= link_to '編輯', edit_admin_project_path(p) %></li>
       </ul>
       </div>
     <% end %>
@@ -41,6 +42,9 @@
 </div>
 <div class="text-center">
   <%= link_to '新增專案', new_admin_project_path %>
+</div>
+<div class="text-center">
+  <%= link_to '新增基金會' ,new_admin_institute_path %>
 </div>
 <div class="test"></div>
 <div class="test2"></div>

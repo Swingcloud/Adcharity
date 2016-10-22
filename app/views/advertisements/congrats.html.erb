@@ -1,0 +1,41 @@
+<div class="exit-btn">
+  <%= image_tag("X.svg")%>
+</div>
+<div class="success-container">
+  <div class="ad_money"> 3 
+		<div class="congrats_word">
+			<h1>
+				恭喜您！
+			</h1>
+			<h2>
+				您已獲得廣告金
+			</h2>
+		</div>
+		<div class="ntd">
+			<h3>NT</h3>
+		</div>
+		<div class="money_sign">
+			<%= image_tag("money.svg")%>
+		</div>
+		<div class="support_int">
+			<h3>
+				您目前支持的專案為：
+			</h3>
+			<h4>
+				關懷生命協會
+			</h4>
+			<h5>
+				關懷生命，2016友善動物勸募計畫
+			</h5>
+		</div>
+		<div class="success-action-btn">
+			<%= link_to "確定捐出廣告金", we_love_you_path ,:'data-turbolinks'=> false,:class=>"put_money" %><br>
+			<%if current_user.unwatch_ad.count > 0 %>
+			<%= link_to '繼續看更多廣告' , project_advertisement_path(session[:focus_project], "watchAd"), :'data-turbolinks'=> false , :class => "see_another_ad" %>
+			<% end %>
+		</div>
+		<div class="ad_amount">
+			<h3>您目前已獲得的廣告金額為：<span><%= session[:ad_count]%></span>元</h3>
+		</div>
+	</div>
+</div>

@@ -4,11 +4,17 @@ Rails.application.routes.draw do
   resources :users, :only => [:show, :edit]
   resources :projects, :only => [:index ,:show] do 
   	resources :advertisements, :only => :show
+    member do 
+      get :institute
+    end
   end
+  get "congrats" => "advertisements#congrats"
+  get "we_love_you" =>"advertisements#we_love_you"
 
   namespace :admin do 
   	resources :projects
-    resource :advertisements
+    resources :advertisements
+    resources :institutes
   	root "home#index", :controller => "home"
   end
 	root to: "home#index" , :controller => "home"

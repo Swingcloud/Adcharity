@@ -1,0 +1,22 @@
+<div class="exit-btn">
+  <%= image_tag("X.svg")%>
+</div>
+<div class="success-container thank">
+  <div class="ad_money thank"> <%= image_tag "partner/partner.png", :class=> "parnter_logo" %>
+		<div class="congrats_word thank">
+			<h1>
+				廣告金已捐出
+			</h1>
+			<h2>關懷生命協會</h2>
+			<h2>感謝您的愛心支持！</h2>
+		</div>
+		<div class="success-action-btn thank">
+			<%= link_to "看更多專案", projects_path ,:class=>"put_money" %><br>
+			<%=link_to '關閉視窗', root_path,:class=>"see_another_ad" %>
+		</div>
+		<div class="we_love_you_accum">
+			<h3>您目前已累計的捐贈金額為： <span><%= current_user.user_donate_count %></span>元</h3>
+		</div>
+
+	</div>
+</div>

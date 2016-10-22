@@ -1,3 +1,282 @@
-// Place all the styles related to the projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$light-black: #4A4A4A;
+$dark-black: #202020;
+$light-gray: #828282;
+$weird-blue: #62B8CC;
+$button-red: #E15958;
+$border-color: #E6E6E6;
+
+
+.project-header{
+	z-index: -1000;
+	text-align: center;
+	border-bottom: solid 1px $border-color;
+	.project-header-img{
+		overflow: hidden;
+		width: 100%;
+		height: 387px;
+		img{
+			width: 100%;
+			height: auto;
+		}
+		.project-institute-img{
+			position: absolute;
+			border-radius: 4px;
+			right: 5%;
+			bottom: 5%;
+			height: 100px;
+			width: 100px;
+			background-color: rgba(255,255,255, 0.95);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img{
+				width: 95%;
+				border-radius: 4px;
+			}
+		}
+	}
+	h1{
+		color: $light-black;
+		font-size: 18px;
+		letter-spacing: 1.01px;
+		margin-top: 16px;
+	}
+	h3{
+		color: $weird-blue;
+		letter-spacing: 1.33px;
+		margin-top: 0px;
+		margin-bottom: 12px;
+		font-size: 16px;
+	}
+}
+.project-container-show{
+	width: 88%;
+	margin: 0 auto;
+}
+.project-top{
+	padding-bottom: 40px;
+	border-bottom: solid 1px $border-color;
+}
+
+
+.status-box{
+	text-align: center;
+	width: 100%;
+	h3{
+		margin-top: 15px;
+		margin-bottom: 15px;
+		color: $light-gray;
+		font-size: 12px;
+		letter-spacing: .67px;
+	}
+	.project-progress-bar{
+		width: 100%;
+		height: 7.71px;
+		background-color: #D8D8D8;
+		border-radius: 2px;
+	}
+	ul{
+		display: flex;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li:nth-child(1){
+			width: 55%;
+		}
+		li:nth-child(2){
+			width: 30%;
+		}
+		li:nth-child(3){
+			width: 15%;
+		}
+		li{
+			text-align: left;
+			h2{
+				font-size: 24px;
+				color: $dark-black;
+				letter-spacing: 1.6px;
+				margin-top: 7.8px;
+				margin-bottom: 5px;
+				span{
+					font-size: 12px;
+					color: #575757;
+					letter-spacing: 1.3px;
+				}
+			}
+			h4{
+				margin-top: 0px;
+				color: #575757;
+				font-size: 12px;
+				letter-spacing: 1.3px;
+				margin-bottom: 34px;
+			}
+		}
+	}
+	a{
+		padding: 15px 43px;
+		background-color: $button-red;
+		color: #fff;
+		border-radius: 4px;
+    &:hover, &:active{
+      text-decoration: none;
+      background-color: darken($button-red,20);
+    }
+	}
+}
+.project-progress-bar-finished{
+	width: 0;
+	height: 7.71px;
+	background-color: $weird-blue;
+	border-radius: 2px;
+	transition: 0.8s;
+}
+
+.project-nav{
+	margin-top: 35px;
+	ul{
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li{
+			a{
+				padding: 10px 37px;
+				border: 1px solid $weird-blue;
+				&:hover, &:active, &:focus{
+					color: white;
+      		text-decoration: none;
+      		background-color: $weird-blue;
+    }
+			}
+			&.pr{
+				a{
+					border-bottom-left-radius: 4px;
+					border-top-left-radius: 4px;
+					border-right: 0px;
+				}
+			&.int{
+				a{
+					border-bottom-right-radius: 4px;
+					border-top-right-radius: 4px;
+				}
+			}
+			}
+		}
+	}
+}
+.project-down{
+
+	h1.pr-title{
+		text-align: center;
+		margin-top: 32px;
+		font-size: 18px;
+		letter-spacing: 1.1px;
+		padding-bottom: 11px;
+		border-bottom: solid 2px $button-red;
+	}
+}
+
+.long_description{
+	width: 100%;
+}
+
+
+
+
+.highlight_p.all_projects{
+  border-bottom: none;
+  &.highlighted{
+  	border-bottom: solid 1px #E6E6E6;
+  }
+}
+
+
+.see_more_projects{
+  height: 65px;
+  text-align: center;
+  border-bottom: solid 2px #E25958;
+  h2{
+    color: #7A7A7A;
+    padding-top: 35px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 1.75px;
+    margin-bottom: 27px;
+    font-weight: 400;
+  }
+  a{
+    text-align: center;
+    letter-spacing: 2.25px;      
+    padding: 11px 103px;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #E15958;
+    font-weight: 300;
+    font-size: 18px;
+  }
+}
+.project-category{
+	z-index: 0;
+	background-color: #F0F0F0;
+	display: flex;
+	justify-content: center;
+	height: 140px;
+	border-bottom: solid 2px #E25958;
+	ul{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		width: 85%;
+		a{
+			padding: 10px 15px;
+			display: inline-block;
+			text-decoration: none;
+			color: #393939;
+			span{
+				color: white;
+				padding: 0.5px 9px;
+				background-color: #E15958;
+				border-radius: 8px;
+				margin-left: 7px;
+			}
+		}
+	}
+}
+.highlight_p_title{
+	text-align: center;
+	h2{
+		color: #393939;
+		font-size: 18px;
+		letter-spacing: 2.25px;
+	}
+}
+
+.desp.project-index{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 0px;
+	img{
+		top:-2px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

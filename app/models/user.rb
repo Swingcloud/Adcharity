@@ -70,9 +70,20 @@ class User < ApplicationRecord
     all_ad = Advertisement.all.map{|ad| ad.id}
     unwatch = all_ad - watch_ad
     return unwatch
+  end
 
 
 
+  def user_donate_count
+    amount = 0 
+    self.user_projectships.each do |p|
+      amount += p.total_donation 
+    end
+    amount
+  end
+
+  def user_email_name
+    name = self.email.split('@').first
   end
 
   # def watched_ad=(arr)
