@@ -40,10 +40,10 @@
 			<div class="project-nav text-center">
 				<ul>
 					<li class="pr">
-						<a href="#">專案計畫</a>
+						<%= link_to '專案計畫', project_path(@project) , :remote => true  %>
 					</li>
 					<li class="int">
-						<a href="#">機構介紹</a>
+						<%= link_to '機構介紹', institute_project_path(@project) , :remote => true %>
 					</li>
 				</ul>
 			</div>
@@ -51,11 +51,6 @@
 			<div class="project-description">
 				<%= raw(@project.description) %>
 			</div>
-		</div>
-
-		<div class="as_you_write">
-		<%= @project.name %>
-		<%= raw(@project.description) %>
 		</div>
 	</div>
 </div>
