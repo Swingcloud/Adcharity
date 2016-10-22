@@ -201,7 +201,7 @@
 				padding: 15px 87px;
 			}
 		}
-		.accum{
+		.we_love_you_accum{
 			width: 145%;
 			position: absolute;
 			bottom: -180%;
@@ -212,7 +212,8 @@
 				letter-spacing: 1.75px;
 				span{
 					font-size: 1em;
-					letter-spacing: 1.75px
+					letter-spacing: 1.75px;
+					color: #5EB8CD;
 				}
 			}
 		}
@@ -229,6 +230,20 @@
 			}
 		}
 	}
+}
+
+.ad_amount{
+	position: absolute;
+  width: 649%;
+  transform: translateX(-41%);
+  bottom: -270%;
+  h3{
+  	font-size: 14px;
+  	letter-spacing: 1.75px;
+  	span{
+  		color: #E15958;
+  	}
+  }
 }
 /*
 @media screen and (max-width: 320px){

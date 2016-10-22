@@ -4,7 +4,7 @@
       <%= link_to projects_path(:category => "動物保育") do %>
         動物保育
         <span>
-          <%= Project.all.where(:category => "動物保育").count %>
+          <%= Project.check_expired.where(:category => "動物保育").count %>
         </span>
       <%end %>  
     </li>
@@ -12,7 +12,7 @@
       <%= link_to projects_path(:category => "獨居老人") do %>
         獨居老人
         <span>
-          <%= Project.all.where(:category => "獨居老人").count %> 
+          <%= Project.check_expired.where(:category => "獨居老人").count %> 
         </span>
       <%end %>
     </li>
@@ -20,7 +20,7 @@
       <%= link_to projects_path(:category => "罕見疾病") do %>
         罕見疾病
         <span>
-          <%= Project.all.where(:category => "罕見疾病").count %> 
+          <%= Project.check_expired.where(:category => "罕見疾病").count %> 
         </span>
       <%end %>
     </li>
@@ -28,7 +28,7 @@
       <%= link_to projects_path(:category => "身心障礙") do %>
         身心障礙
         <span>
-          <%= Project.all.where(:category => "身心障礙").count %> 
+          <%= Project.check_expired.where(:category => "身心障礙").count %> 
         </span>
       <%end %>
     </li>

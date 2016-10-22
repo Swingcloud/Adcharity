@@ -8,6 +8,13 @@ $(document).on('turbolinks:load', function(){
     $('.svg').toggleClass('svg_open');
   });
 
+
+  setTimeout(function() {
+    $('.alert').slideUp();
+  }, 2000);
+
+  
+
   jQuery('img.svg').each(function(){
     var $img = jQuery(this);
     var imgID = $img.attr('id');
