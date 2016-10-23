@@ -697,6 +697,52 @@ footer{
 }
 
 
+
+//about_us style
+
+.intro-pic{
+  width: 100%;
+  img{
+    width:100%;
+    height: auto;
+  }
+}
+
+.about_us_container{
+  width: 90%;
+  margin: 0 auto;
+  h1{
+    color: #545454;
+    font-size: 24px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    text-align: center;
+  }
+  p{
+    color: #545454;
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  h2{
+    color: #E25958;
+    letter-spacing: 2.25px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .about_us_container{
+    h1{
+      letter-spacing: normal;
+    }
+    h2{
+      letter-spacing: normal;
+    }
+  }
+}
+
 /*@media screen and (min-width: $break-small + 1) and (max-width: $break-medium - 1) {
 	
 	header{

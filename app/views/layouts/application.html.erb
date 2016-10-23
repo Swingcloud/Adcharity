@@ -37,7 +37,7 @@
         <div class="nav nav-right">
           <ul class="ul-right">
             <li class="coop">與我們合作</li>
-            <li>關於我們</li>
+            <li><%= link_to '關於我們', about_us_path %></li>
             <li>
               <% if current_user %>
                 <%= link_to image_tag("user_icon_not_active.svg", :class => "svg"), "#",:id => "user_toggle" %>
@@ -75,11 +75,11 @@
     <footer>
       <div class="footer-nav">
         <ul>
-          <li><a href="#">關於我們</a></li>
+          <li><%= link_to '關於我們', about_us_path %></li>
           <li><a href="#">常見問題</a></li>
           <li><a href="#">合作提案</a></li>
           <li><a href="#">推薦專案</a></li>
-          <li><a href="#">所有專案</a></li>
+          <li><%= link_to '所有專案' , projects_path %></li>
         </ul>
         <%= image_tag "alpha camp.png" %>
       </div>

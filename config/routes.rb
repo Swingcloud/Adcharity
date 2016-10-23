@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
   get "congrats" => "advertisements#congrats"
   get "we_love_you" =>"advertisements#we_love_you"
-
+  get "about_us"=>"home#about_us"
   namespace :admin do 
   	resources :projects
     resources :advertisements
