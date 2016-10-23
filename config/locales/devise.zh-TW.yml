@@ -58,5 +58,5 @@ zh-TW:
       not_found: "找不到。"
       not_locked: "並未被鎖定。"
       not_saved:
-        one: "有一個錯誤導致 %{resource} 不能被儲存："
-        other: "有 %{count} 個錯誤導致 %{resource} 不能被儲存："
+        one: "發生錯誤！無法為您創建帳號！錯誤如下："
+        other: "有 %{count} 個錯誤，無法為您創建帳號："
