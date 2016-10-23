@@ -56,7 +56,7 @@ header{
       color: #4A4A4A;
       a{
         color: inherit;
-        &:hover {
+        &:hover, &:focus {
         color: $header-hover-color;
         text-decoration: none;
         }
@@ -333,6 +333,11 @@ footer{
         font-size: 18px; 
         letter-spacing: 2.25px;
         font-weight: 300;
+        &:hover, &:focus {
+          color: $header-hover-color;
+          text-decoration: none;
+        }
+
       }
     }
   }
