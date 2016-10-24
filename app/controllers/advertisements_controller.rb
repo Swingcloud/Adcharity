@@ -1,6 +1,13 @@
 class AdvertisementsController < ApplicationController
 	layout 'advertisement'
 
+  def index 
+    if current_user
+      @project= Project.find(params[:project_id])
+      @advertisements = Advertisement.find(current_user.unwatch_ad)
+    end
+  end
+
 	def show
     if session[:ad_count] > 0
       session[:ad_count] = 0
@@ -13,7 +20,17 @@ class AdvertisementsController < ApplicationController
     		:expires => 5.minutes.from_now
     	}
     else
-      if current_user.unwatch_ad.count > 0
+      if params[:id]
+        @project= Project.find(params[:project_id])
+        @advertisement = Advertisement.find(params[:id])
+        UserAdship.create( :user_id => current_user.id , :advertisement_id => @advertisement.id)
+        session[:focus_project] = @project.id
+        session[:ad_count] += 3
+        puts "----------"
+        puts session[:ad_count]
+        puts "-----------"
+
+      elsif current_user.unwatch_ad.count > 0
         @project= Project.find(params[:project_id])
     	  @advertisement = Advertisement.find(current_user.unwatch_ad.sample(1)[0])
         UserAdship.create( :user_id => current_user.id , :advertisement_id => @advertisement.id)

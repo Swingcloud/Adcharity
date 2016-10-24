@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161023071652) do
+ActiveRecord::Schema.define(version: 20161024025717) do
 
   create_table "advertisements", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "ad_href"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20161023071652) do
     t.integer  "total_view"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
+    t.string   "name"
   end
 
   create_table "ckeditor_assets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

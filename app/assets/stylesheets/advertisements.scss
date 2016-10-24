@@ -271,3 +271,102 @@
 		}
 	}
 }*/
+
+
+
+
+//index
+
+.advertisements_container{
+	color: #E15958;
+	width: 90%;	
+	margin:0 auto;
+	h2{
+		font-size: 14px;
+		letter-spacing: 1.75px;
+		font-weight: 300;
+		
+	}
+}
+
+.advertisement_cell{
+	width: 100%;
+	margin: 0 auto;
+	h3{
+		color: #fff;
+		font-size: 18px;
+		letter-spacing: 2.25px;
+		font-weight: 300;
+	}
+}
+
+.ad_video_cell{
+	width: 70%;
+	margin: 0 auto;
+	z-index: -1000;
+	display: inline-block;
+	h3{
+		font-weight: 300;
+		letter-spacing: 2px;
+	}
+	.ad_index_price{
+		width: 50px;
+    height: 50px;
+    background-color: #fff;
+    position: absolute;
+    right: -35%;
+    bottom: 60%;
+    text-align: center;
+    border-radius: 50%;
+		p{
+			color: #E15958;
+			font-size: 24px;
+			span{
+				position: absolute;
+				bottom: -10px;
+				font-size: 9px;
+				letter-spacing: 1.12px;
+			}
+		}
+	}
+	.ad_index_play{
+		position: absolute;
+		width: 50px;
+    right: -35%;
+    bottom: 10%;
+    img{
+			width: 100%;
+		}
+	}
+
+}
+
+.ad_notification{
+	z-index: 1000;
+	position: fixed;
+  bottom: 0px;
+  background-color: #fff;
+  width: 375px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 74px;
+  .back{
+  	color: #E15958;
+  	font-size: 15px;
+  	font-weight: 300;
+  	letter-spacing: 1.88px;
+  }
+  .ad_index_amount{
+  	h3{
+  		margin: 0;
+  		font-size: 14px;
+  		letter-spacing: 1.75px;
+  		color: #808080;
+  		font-weight: 300;
+  		span{
+  			color: #E15958;
+  		}
+  	}
+  }
+}
