@@ -11,7 +11,7 @@ set :keep_releases, 5
 append :linked_files, 'config/database.yml', 'config/secrets.yml','config/facebook.yml'
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system'
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system','public/uploads/images','public/uploads/institute_images','public/uploads/project_images'
 
 set :passenger_restart_with_touch, true
 # Default deploy_to directory is /var/www/my_app_name

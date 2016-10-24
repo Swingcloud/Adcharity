@@ -60,7 +60,11 @@ $border-color: #E6E6E6;
 	border-bottom: solid 1px $border-color;
 }
 
+.status-down.status-down{
+	height: 50px;
+  margin-top: 30px;
 
+}
 .status-box{
 	text-align: center;
 	width: 100%;
@@ -124,6 +128,16 @@ $border-color: #E6E6E6;
       background-color: darken($button-red,20);
     }
 	}
+}
+a.watch_ad{
+	padding: 15px 43px;
+	background-color: $button-red;
+	color: #fff;
+	border-radius: 4px;
+  &:hover, &:active{
+    text-decoration: none;
+    background-color: darken($button-red,20);
+    }
 }
 .project-progress-bar-finished{
 	width: 0;
