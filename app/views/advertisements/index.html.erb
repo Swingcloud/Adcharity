@@ -1,33 +1,32 @@
 <div class="exit-btn">
   <%= image_tag("X.svg")%>
 </div>
-<div class="advertisements_container">
+<div class="ad-title">
 	<h2>點按看更多廣告影片</h2>
-	<% @advertisements.each do |a| %>
+</div>
+<% @advertisements.each do |a| %>
+	<div class="advertisements_container">
 		<div class="advertisement_cell" onclick="location.href=
 	'<%= project_advertisement_path(@project, a)%>';">
 			<h3> <%= a.name %></h3>
 			<div class="ad_video_cell">
 				<div class="embed-container"> 
-	  		<iframe id="inst-ad"
+	  			<iframe id="inst-ad"
 	          src="https://www.youtube.com/embed/<%=ad_href(a.ad_href)%>?autoplay=0&controls=0"
 	          frameborder="0"></iframe> 
 	  		</div>
 	  		<div class="ad_index_price">
 	  			<p> 
-	  				<span>NT</span><%= number_with_precision( a.price_per_look, precision: 0) %>
-	  				
+	  				<span>NT</span><%= number_with_precision( a.price_per_look, precision: 0) %>		
 	  			</p>
 	  		</div>
 	  		<div class="ad_index_play">
 	  			<%= image_tag ('Play.png') %>
 	  		</div>
-  		</div>
-			
-		</div>
-	<% end %>
-	
-</div>
+  		</div>	
+		</div>	
+	</div>	
+<% end %>
 <div class="ad_notification">
 		<div class="back">
 			直接捐出

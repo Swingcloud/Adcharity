@@ -278,19 +278,25 @@
 //index
 
 .advertisements_container{
-	color: #E15958;
-	width: 90%;	
+	
+	width: 100%;	
 	margin:0 auto;
-	h2{
+	border-bottom: solid 1px #383838;
+}
+
+.ad-title{
+	width: 90%;
+	margin: 0 auto;
+		h2{
 		font-size: 14px;
 		letter-spacing: 1.75px;
 		font-weight: 300;
-		
+		color: #E15958;	
 	}
 }
 
 .advertisement_cell{
-	width: 100%;
+	width: 90%;
 	margin: 0 auto;
 	h3{
 		color: #fff;

@@ -8,6 +8,7 @@ class RecommendsController < ApplicationController
 		@recommend = recommend_type.new(params_permitted)
 		@recommend.save
 		redirect_to root_path
+		flash[:notice] = "謝謝您！"
 	end
 
 

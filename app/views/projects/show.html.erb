@@ -47,6 +47,29 @@
 					</li>
 				</ul>
 			</div>
+			<div class="institute-profile">
+				<h2>	<%= @institute.name %> </h2>
+				<h3> 英文基金會名稱</h3>
+				<div class="institute-pic">
+					<%= image_tag @institute.icon %>
+				</div>
+				<div class="institute_action">
+					<ul>
+						<li><a href=""><%= image_tag(('note.png'), :class=>'note') %>  採訪紀實</a></li>
+						<li><a href=""><%= image_tag(('video.png'), :class=>'video') %>影片介紹</a></li>
+					</ul>
+				</div>
+				<div class="institute-contact">
+					<h3> <%= @institute.address %></h3>
+					<ul>
+						<li><a href="#"><%= image_tag(('institute/phone.png'), :class => 'inst-phone') %></a> </li>
+						<li><a href="#"><%= image_tag(('institute/map.png'), :class=> 'inst-map' )%></a> </li>
+						<li><a href="#"><%= image_tag(('institute/email.png'), :class=> 'inst-email') %></a> </li>
+						<li><a href="#"><%= image_tag(('institute/link.png'), :class=> 'inst-link') %></a> </li>
+					</ul>
+				</div>
+
+			</div>
 			<h1 class="pr-title"><%= @project.name %></h1>	
 			<div class="project-description">
 				<%= raw(@project.description) %>

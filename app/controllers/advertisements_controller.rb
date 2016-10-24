@@ -20,7 +20,7 @@ class AdvertisementsController < ApplicationController
     		:expires => 5.minutes.from_now
     	}
     else
-      if params[:id]
+      if params[:id].size<7
         @project= Project.find(params[:project_id])
         @advertisement = Advertisement.find(params[:id])
         UserAdship.create( :user_id => current_user.id , :advertisement_id => @advertisement.id)

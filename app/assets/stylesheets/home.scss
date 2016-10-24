@@ -18,8 +18,10 @@ $header-hover-color: #999;
     .search_icon{
       img{
         position: absolute;
-        left: 10px;
-        top: -2px;
+        width: 30px;
+        height: 30px;
+        left: 16px;
+        top: -3px;
       }
       .search_project{
         width: 100%;
@@ -400,7 +402,7 @@ footer{
   	height: 141px;
   	box-shadow: 0px 2px 4px #999999;
 		ul{
-  		top: 22px;
+  		top: 27px;
     }
     .nav{
       flex-wrap: wrap;
