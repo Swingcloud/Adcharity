@@ -12,8 +12,8 @@ class Project < ApplicationRecord
     :public => '-background white -gravity center -extent 640x640 -colorspace sRGB -quality 70',
     :view => '-colorspace sRGB -quality 60'
   },
-  :path => ":rails_root/public/uploads/images/:id_:style_:fingerprint.:extension",
-  :url => "/uploads/images/:id_:style_:fingerprint.:extension",
+  :path => ":rails_root/public/uploads/project_images/:id_:style_:fingerprint.:extension",
+  :url => "/uploads/project_images/:id_:style_:fingerprint.:extension",
   default_url: "/images/:style/missing.png"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 

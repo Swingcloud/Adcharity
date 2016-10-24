@@ -358,10 +358,18 @@
   align-items: center;
   height: 74px;
   .back{
-  	color: #E15958;
-  	font-size: 15px;
-  	font-weight: 300;
-  	letter-spacing: 1.88px;
+  	a{
+  		color: #E15958;
+  		font-size: 15px;
+  		font-weight: 300;
+  		letter-spacing: 1.88px;
+  		text-decoration:none;
+  	}
+  	&:hover, &:focus{
+    	color: #E15958;
+    	text-decoration:none;
+  	}
+
   }
   .ad_index_amount{
   	h3{
