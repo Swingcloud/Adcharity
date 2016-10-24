@@ -13,6 +13,20 @@ class Admin::InstitutesController < ApplicationController
   	end
 	end
 
+	def edit
+		@institute = Institute.find(params[:id])
+	end
+
+	def update
+		@institute = Institute.find(params[:id])
+		if @institute.update(params_permitted)
+			flash[:notice]="編輯成功"
+			redirect_to admin_root_path
+		else
+			render :action => :edit
+		end
+	end
+
 
 
 
