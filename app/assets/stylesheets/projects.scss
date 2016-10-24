@@ -14,7 +14,7 @@ $border-color: #E6E6E6;
 	.project-header-img{
 		overflow: hidden;
 		width: 100%;
-		height: 387px;
+		height: auto;
 		img{
 			width: 100%;
 			height: auto;
@@ -270,8 +270,13 @@ $border-color: #E6E6E6;
 }
 
 .project-description{
+	p{
+		color: #757474;
+		font-size: 14px;
+		letter-spacing: 1.17px;
+	}
 	img{
-		width: 100%;
+		width: 314px;
 		height: auto;
 	}
 }
