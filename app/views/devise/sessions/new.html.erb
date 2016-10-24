@@ -1,26 +1,40 @@
-<h2>Log in</h2>
+<div class="sign_and_log_bg">
+  <div class="sign_and_log_container">
+    <h2>登入</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.email_field :email,:placeholder => "Email", autofocus: true %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+      <div class="field">
+        <%= f.password_field :password,:placeholder =>"Password", autocomplete: "off" %>
+      </div>
+      <div class="remember_and_forget_container">
+        <% if devise_mapping.rememberable? -%>
+          <div class="field remeber_and_forget">
+            <%= f.check_box :remember_me , :class=>"remember_me" %>
+            <%= f.label :remember_me, '記得我' %>
+          </div>
+        <% end -%>
+        <div class="field remeber_and_forget">
+          <%= link_to "忘記密碼？", new_password_path(resource_name), :class => 'remember_and_forget_a' %>
+        </div>
+      </div>
+      
+      
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <div class="actions">
+        <%= f.submit "立即登入",:class => 'act-btn' %>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+    <div class="forgot_sign_up">
+    還沒註冊帳號？
+      <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+        <%= link_to "立即註冊", new_registration_path(resource_name) , :class=> 'remember_and_forget_a'%><br />
+      <% end -%>
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

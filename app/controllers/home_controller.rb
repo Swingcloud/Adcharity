@@ -12,4 +12,8 @@ class HomeController < ApplicationController
 		@projects= Project.check_expired
 		@project = Project.first
 	end
+
+	def about_us
+
+	end
 end

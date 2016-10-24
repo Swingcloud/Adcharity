@@ -2,6 +2,9 @@ class AdvertisementsController < ApplicationController
 	layout 'advertisement'
 
 	def show
+    if session[:ad_count] > 0
+      session[:ad_count] = 0
+    end
 		if !user_signed_in?
 			@advertisement = Advertisement.find_by_randomize
       @project= Project.find(params[:project_id])
@@ -37,13 +40,11 @@ class AdvertisementsController < ApplicationController
       if !current_user.projects.exists?(session[:focus_project])
         current_user.user_projectships.update(:status => false)
         UserProjectship.create( :user_id => current_user.id , :project_id => session[:focus_project], :status => true, :total_donation => session[:ad_count])
-        session[:ad_count] = 0
         session[:focus_project] = nil
       else
         current_user.user_projectships.update(:status => false)
         donate_prize = current_user.user_projectships.find_by_project_id(session[:focus_project]).total_donation += session[:ad_count]
         current_user.user_projectships.find_by_project_id(session[:focus_project]).update( :status => true, :total_donation => donate_prize)
-        session[:ad_count] = 0
         session[:focus_project] = nil
       end 
     end

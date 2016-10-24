@@ -15,7 +15,7 @@
 			<%=link_to '關閉視窗', root_path,:class=>"see_another_ad" %>
 		</div>
 		<div class="we_love_you_accum">
-			<h3>您目前已累計的捐贈金額為： <span><%= current_user.user_donate_count %></span>元</h3>
+			<h3>您目前已累計的捐贈金額為： <span><%=current_user.user_donate_count + session[:ad_count] %></span>元</h3>
 		</div>
 
 	</div>

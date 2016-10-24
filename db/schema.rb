@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161022110418) do
+ActiveRecord::Schema.define(version: 20161023071652) do
 
   create_table "advertisements", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "ad_href"
@@ -67,6 +67,17 @@ ActiveRecord::Schema.define(version: 20161022110418) do
     t.string   "category"
     t.index ["category"], name: "index_projects_on_category", using: :btree
     t.index ["name"], name: "index_projects_on_name", using: :btree
+  end
+
+  create_table "recommends", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "recommend_user",                            null: false
+    t.string  "phone_number",                              null: false
+    t.string  "email",                                     null: false
+    t.string  "recommend_inst",                            null: false
+    t.string  "category",                     default: ""
+    t.string  "type"
+    t.string  "inst_project"
+    t.text    "description",    limit: 65535
   end
 
   create_table "user_adships", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
