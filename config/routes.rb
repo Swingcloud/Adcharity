@@ -8,6 +8,8 @@ Rails.application.routes.draw do
       get :institute
     end
   end
+  resources :recommend_institutes, :controller => :recommends, :type => "Person"
+  resources :project_proposals, :controller => :recommends, :type => "Company"
   get "congrats" => "advertisements#congrats"
   get "we_love_you" =>"advertisements#we_love_you"
   get "about_us"=>"home#about_us"

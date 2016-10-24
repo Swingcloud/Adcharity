@@ -1,0 +1,33 @@
+<div class="form-group">
+  <%= f.label :recommend_user, "＊提案人姓名" %>
+  <%= f.text_field :recommend_user ,:placeholder => '輸入你的名字',:class =>"form-control"%>
+</div>
+<div class="form-group">
+ <%= f.label :phone_number, "＊提案人電話" %>
+ <%= f.text_field :phone_number, :placeholder => '輸入你的電話', :class => "form-control" %>
+</div>
+<div class="form-group">
+  <%= f.label :email, "＊提案人電子郵件" %>
+  <%= f.text_field :email ,:placeholder => '輸入你的EMAIL',:class =>"form-control"%>
+</div>
+<hr>
+<div class="form-group">
+  <%= f.label :recommend_inst, "＊公司名稱" %>
+  <%= f.text_field :recommend_inst,:placeholder => '輸入公司名稱' ,:class =>"form-control"%>
+</div>
+
+<div class="form-group">
+  <%= f.label :inst_project, "＊公司產品" %>
+  <%= f.text_field :inst_project ,:placeholder => '輸入產品名稱' ,:class =>"form-control"%>
+</div>
+
+
+<div class="form-group">
+  <%= f.label :description, "＊公司產品介紹與概述"%>
+  <%= f.text_area :description ,:placeholder => '輸入廣告影片產品介紹內容與概述⋯⋯',:class =>"form-control"%> 
+</div>
+<div class="form-group">
+  <%= f.submit "送出" , :class =>"act-btn"%>
+</div>
+
+

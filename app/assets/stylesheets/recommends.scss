@@ -1,0 +1,65 @@
+.recommend_container{
+	width: 90%;
+	margin: 0 auto;
+	label{
+		font-size: 18px;
+		letter-spacing: 2.25px;
+		color: #393939;
+		font-weight: 300;
+		margin-bottom: 0px;
+		margin-top: 15px;
+	}
+	hr{
+		margin-top: 20px;
+    margin-bottom: 13px;
+    border: 0;
+    border-top: 1px solid #E15958;
+	}
+	h2{
+		color: #E15958;
+		font-size: 24px;
+		letter-spacing: 3px;
+		font-weight: 400;
+		text-align: center;
+	}
+	.form-control{
+		border: solid 1px #787878;
+		color: #BDBDBD;
+		font-size: 18px;
+		letter-spacing: 2.25px;
+		font-weight: 300;
+		height: auto;
+		padding: 12px 15px;
+	}
+
+	.form-group.form-category{
+		margin-bottom: 0px;
+	}
+
+	.act-btn{
+    border: none;
+    background-color: #E15958;
+    color: white;
+    letter-spacing: 3px;
+    font-weight: 300;
+    font-size: 18px;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 4px;
+    margin-bottom: 50px;
+    margin-top: 25px;
+  }
+  label.recommend_category{
+  	display: block;
+  }
+  select{
+  	width: 100%;
+    background-color: #fff;
+    height: 49px;
+    color: #BDBDBD;
+    font-size: 18px;
+    letter-spacing: 2.25px;
+    font-weight: 300;
+  }
+}

@@ -4,6 +4,7 @@
 @import "admin/home";
 @import "projects";
 @import "advertisements";
+@import "recommends";
 @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
 *{
@@ -20,6 +21,7 @@ html,body{
   max-width: 414px;
   padding: 0;
   margin: 0;
+  margin: 0 auto;
 }
 
 body#ad{

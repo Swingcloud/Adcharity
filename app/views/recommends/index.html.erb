@@ -1,0 +1,32 @@
+<div class="recommend_container">
+<% if @recommend.type == 'Person' %>
+<h2>我要推薦專案</h2>
+<hr>
+<%= form_for @recommend, :url => recommend_institutes_path do |f| %>
+	<% if @recommend.errors.any? %>
+    <ul>
+      <% @recommend.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+	<% end %>
+	<%= render :partial => "recommend_form", :locals => {:f => f} %>
+<% end %>
+<% else%>
+<h2>合作提案</h2>
+<hr>
+<%= form_for @recommend, :url => project_proposals_path do |f| %>
+	<% if @recommend.errors.any? %>
+    <ul>
+      <% @recommend.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+	<% end %>
+	<%= render :partial => "proposal_form", :locals => {:f => f} %>
+	
+<% end %>
+<%end%>
+</div>
+
+
