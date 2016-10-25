@@ -1,5 +1,7 @@
 class Admin::ProjectsController < ApplicationController
   before_action :find_project, :only => [:edit, :destroy, :update]
+  before_action :authenticate_user!
+  before_action :check_admin 
 
 
   def new
@@ -49,6 +51,16 @@ class Admin::ProjectsController < ApplicationController
 
   def find_project
     @project=Project.find(params[:id])
+  end
+
+  def check_admin
+    unless current_user.admin?
+      raise ActiceRecoed::RecordNotFound
+      return
+    end
+    # authenticate_or_request_with_http_basic do |user_name, password| 很陽春的驗證流程
+    #        user_name == "username" && password == "password"
+    # end
   end
 
 

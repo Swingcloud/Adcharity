@@ -1,4 +1,6 @@
 class Admin::InstitutesController < ApplicationController
+	before_action :authenticate_user!
+	before_action :check_admin 
 
 	def new
 		@institute = Institute.new
@@ -35,4 +37,15 @@ class Admin::InstitutesController < ApplicationController
 	def params_permitted
     params.require(:institute).permit(:name, :description, :icon, :telephone,:email,:address) 
   end
+
+  def check_admin
+  	unless current_user.admin?
+  		raise ActiceRecoed::RecordNotFound
+  		return
+  	end
+    # authenticate_or_request_with_http_basic do |user_name, password| 很陽春的驗證流程
+    #        user_name == "username" && password == "password"
+    # end
+  end
+  
 end

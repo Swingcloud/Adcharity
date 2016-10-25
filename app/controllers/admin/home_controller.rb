@@ -7,6 +7,8 @@ class Admin::HomeController < ApplicationController
 		@advertisements = Advertisement.all
     
 	end
+  
+  private
 
 	def check_admin
   	unless current_user.admin?

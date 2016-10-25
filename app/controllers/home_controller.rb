@@ -1,10 +1,16 @@
 class HomeController < ApplicationController
 
 	def index 
-		if current_user && !session[:ad_count]
+		if current_user && !session[:ad_count] 
 			session[:ad_count] = 0
 			puts session[:ad_count]
 		end
+
+		if session[:ad_count] > 0 
+			session[:ad_count] = 0
+			puts session[:ad_count]
+		end
+
 		puts "------"
 		puts session[:ad_count]
 		puts "------"
