@@ -31,7 +31,7 @@ class Admin::AdvertisementsController < ApplicationController
   private
 
   def params_permitted
-    params.require(:advertisement).permit(:ad_href, :price_per_look) 
+    params.require(:advertisement).permit(:ad_href, :price_per_look, :name) 
   end
 
   def find_ad
