@@ -87,7 +87,7 @@ class User < ApplicationRecord
   end
 
   def admin?
-    self.role == "admin"
+    self.admin == true
   end
 
   # def watched_ad=(arr)

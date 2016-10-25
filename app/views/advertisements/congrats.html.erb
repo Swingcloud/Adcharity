@@ -35,7 +35,14 @@
 			<% end %>
 		</div>
 		<div class="ad_amount">
-			<h3>您目前已獲得的廣告金額為：<span><%= session[:ad_count]%></span>元</h3>
+			<h3>您目前已獲得的廣告金額為：
+			<span>
+				<% if seesion[:ad_count] %>
+					<%= session[:ad_count]%>
+				<% else %>
+				0
+				<% end %>
+			</span>元</h3>
 		</div>
 	</div>
 </div>

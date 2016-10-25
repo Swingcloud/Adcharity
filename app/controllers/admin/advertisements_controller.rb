@@ -24,6 +24,7 @@ class Admin::AdvertisementsController < ApplicationController
       redirect_to admin_root_path
     else
       render :action => :edit
+    end
   end
 
   private
