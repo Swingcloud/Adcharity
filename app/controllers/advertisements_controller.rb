@@ -14,7 +14,7 @@ class AdvertisementsController < ApplicationController
       session[:ad_count] = 0
     end
 		if !user_signed_in?
-			@advertisement = Advertisement.find_by_randomize
+			@advertisement = Advertisement.find(1)
       @project= Project.find(params[:project_id])
     	cookies[:user_first_sign_up] = {
     		:value => @advertisement.id,
