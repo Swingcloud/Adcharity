@@ -40,10 +40,10 @@
 			<div class="project-nav text-center">
 				<ul>
 					<li class="pr">
-						<%= link_to '專案計畫', project_path(@project) , :remote => true  %>
+						<%= link_to '專案計畫', project_path(@project) , :remote => true ,:class => "pr_a_tag a_tag_open" %>
 					</li>
 					<li class="int">
-						<%= link_to '機構介紹', institute_project_path(@project) , :remote => true %>
+						<%= link_to '機構介紹', institute_project_path(@project) , :remote => true ,:class => "int_a_tag" %>
 					</li>
 				</ul>
 			</div>
