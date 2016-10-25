@@ -36,7 +36,7 @@ class Admin::InstitutesController < ApplicationController
 	private
 
 	def params_permitted
-    params.require(:institute).permit(:name, :description, :icon, :telephone,:email,:address) 
+    params.require(:institute).permit(:name, :description, :icon, :telephone,:email,:address, :english_name) 
   end
 
   def check_admin
