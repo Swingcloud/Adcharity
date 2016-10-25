@@ -1,4 +1,5 @@
 class RecommendsController < ApplicationController
+	before_action :authenticate_user!
 
 	def index
 		@recommend = recommend_type.new
