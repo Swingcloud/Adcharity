@@ -36,7 +36,6 @@ class Admin::AdvertisementsController < ApplicationController
     @advertisement= Advertisement.find(params[:id])
   end
 
-  private
 
   def check_admin
     unless current_user.admin?
