@@ -1,8 +1,8 @@
-<h2>編輯專案</h2>
-<%= form_for [:admin, @project] do |f| %>
-	<% if @project.errors.any? %>
+<h2>編輯廣告</h2>
+<%= form_for [:admin, @advertisement] do |f| %>
+	<% if @advertisement.errors.any? %>
     <ul>
-      <% @project.errors.full_messages.each do |msg| %>
+      <% @advertisement.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
     </ul>

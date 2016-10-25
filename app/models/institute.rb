@@ -12,6 +12,6 @@ class Institute < ApplicationRecord
   },
   :path => ":rails_root/public/uploads/institute_images/:id_:style_:fingerprint.:extension",
   :url => "/uploads/institute_images/:id_:style_:fingerprint.:extension",
-  default_url: "/images/:style/missing.png"
+  default_url: "/images/:style/inst_missing.png"
   validates_attachment_content_type :icon, content_type: /\Aimage\/.*\z/
 end

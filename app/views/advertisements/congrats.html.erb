@@ -1,5 +1,7 @@
 <div class="exit-btn">
-  <%= image_tag("X.svg")%>
+  <%= link_to root_path do %>
+  	<%= image_tag("X.svg")%>
+  <%end %>
 </div>
 <div class="success-container">
   <div class="ad_money"> 3 
@@ -37,7 +39,7 @@
 		<div class="ad_amount">
 			<h3>您目前已獲得的廣告金額為：
 			<span>
-				<% if seesion[:ad_count] %>
+				<% if session[:ad_count] %>
 					<%= session[:ad_count]%>
 				<% else %>
 				0

@@ -3,12 +3,15 @@
   <div class="row">
     <% @advertisements.each do |a| %>
       <div class="col-sm-4">
-        <div class="embed-container"> 
+        <p><%= a.name %></p> 
+        <div class="embed-container">
           <%= embed(a.ad_href) %> 
         </div>
         <p>
-          <%= a.price_per_look %> 元
+          <%= a.price_per_look %> 元<br>
+          <%= link_to '編輯', edit_admin_advertisement_path(a) %>
         </p>
+        <br>
       </div>
     <% end %>
   </div>
@@ -32,7 +35,7 @@
           </li>
           <li><%= link_to'詳細專案', project_path(p) %> </li>
           <li><%= link_to '編輯', edit_admin_project_path(p) %></li>
-      </ul>
+        </ul>
       </div>
     <% end %>
   </div>
