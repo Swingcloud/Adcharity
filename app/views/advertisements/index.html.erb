@@ -4,6 +4,7 @@
 <div class="ad-title">
 	<h2>點按看更多廣告影片</h2>
 </div>
+<div class="advertisement-padding">
 <% @advertisements.each do |a| %>
 	<div class="advertisements_container">
 		<div class="advertisement_cell" onclick="location.href=
@@ -27,6 +28,7 @@
 		</div>	
 	</div>	
 <% end %>
+</div>
 <div class="ad_notification">
 		<div class="back">
 			<%= link_to '直接捐出', we_love_you_path, :'data-turbolinks'=> false %>
@@ -35,3 +37,5 @@
 			<h3>累計尚未捐出廣告金額為：<span><%= session[:ad_count]%></span>元</h3>
 		</div>
 </div>
+
+

@@ -16,6 +16,9 @@
 //= require bootstrap-sprockets
 //= require home
 //= require ckeditor/init
+//= require jquery.excoloSlider.min
+//= require shAutoloader
+//= require shCore
 
 
 

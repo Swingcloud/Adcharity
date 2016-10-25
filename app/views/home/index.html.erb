@@ -1,6 +1,29 @@
+<div class="mobile_latest_news">
+  <div id="sliderB" class="slider">
+    <div>
+    <!-- news 01 --> 
+    <!--category-->
+      <a class="main_pic" href="#">
+        <%= image_tag('BANNER2.png') %>
+      </a>
 
-<div class="banner">
+    </div>
+    <div>
+    <!-- news 02 -->
+      <a class="main_pic" href="#">
+        <%= image_tag('BANNER2.png') %>
+      </a>                          
+    </div>
+    <div style="background-color: #00ff05">
+      <!-- news 03 -->
+      <a class="main_pic" href="#">
+        <%= image_tag('BANNER2.png') %>
+      </a>                    
+    </div>
+  </div>
 </div>
+
+
 <div class="highlight_p">
   <div class="desp">
     <div class="desp-text desc">
@@ -51,6 +74,12 @@
     <%=link_to '我要推薦基金會', recommend_institutes_path %>
   </div>
 </div>
+
+<script type="text/javascript">
+  $(function () {
+    $("#sliderB").excoloSlider();
+  });
+</script>
 
 
 

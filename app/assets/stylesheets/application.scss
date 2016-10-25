@@ -5,6 +5,8 @@
 @import "projects";
 @import "advertisements";
 @import "recommends";
+@import "jquery.excoloSlider";
+@import "shThemeDefault";
 @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
 *{
@@ -278,6 +280,11 @@ $box_height:200px;
   @include box(200px, 200px);
   border:solid 5px $color_main;
   background-color: $color_background;
+}
+
+.mobile_latest_news .slider a img{
+  width: 100%;
+  height: auto;
 }
 
 /*@keyframes ani3{
