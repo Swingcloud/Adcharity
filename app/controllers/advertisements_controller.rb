@@ -28,7 +28,12 @@ class AdvertisementsController < ApplicationController
         puts "----------"
         puts session[:ad_count]
         puts "-----------"
-
+      elsif current_user.user_adships.exists? == false
+        @project= Project.find(params[:project_id])
+        @advertisement = Advertisement.find(1)
+        UserAdship.create( :user_id => current_user.id , :advertisement_id => @advertisement.id)
+        session[:focus_project] = @project.id
+        session[:ad_count] += 3
       elsif current_user.unwatch_ad.count > 0
         @project= Project.find(params[:project_id])
     	  @advertisement = Advertisement.find(current_user.unwatch_ad.sample(1)[0])
