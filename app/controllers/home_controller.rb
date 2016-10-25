@@ -6,7 +6,7 @@ class HomeController < ApplicationController
 			puts session[:ad_count]
 		end
 
-		if session[:ad_count] > 0 
+		if current_user && session[:ad_count] > 0 
 			session[:ad_count] = 0
 			puts session[:ad_count]
 		end
