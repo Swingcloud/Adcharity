@@ -385,6 +385,12 @@
   }
 }
 
+@media screen and (max-width: 320px){
+	.ad_notification{
+		width: 320px;
+	}
+}
+
 .advertisement-padding{
 	padding-bottom: 74px;
 }

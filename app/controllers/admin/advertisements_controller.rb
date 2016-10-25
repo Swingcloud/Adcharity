@@ -1,4 +1,5 @@
 class Admin::AdvertisementsController < ApplicationController
+  layout 'admin'
   before_action :find_ad, :only => [:edit, :destroy, :update]
   before_action :authenticate_user!
   before_action :check_admin 

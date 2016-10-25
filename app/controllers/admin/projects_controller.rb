@@ -1,4 +1,5 @@
 class Admin::ProjectsController < ApplicationController
+  layout 'admin'
   before_action :find_project, :only => [:edit, :destroy, :update]
   before_action :authenticate_user!
   before_action :check_admin 

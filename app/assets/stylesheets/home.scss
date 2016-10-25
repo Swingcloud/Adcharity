@@ -257,9 +257,12 @@ header{
 }
 .days{
   float: right;
-  margin-top: 2.5px;
   p{
-    padding-right: 13px;  
+    padding-right: 13px; 
+    span{
+      font-size: 14px;
+      font-weight: 900;
+    } 
   }
 }
 .newest_p{
