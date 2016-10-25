@@ -10,9 +10,7 @@ class AdvertisementsController < ApplicationController
   end
 
 	def show
-    if session[:ad_count] > 0
-      session[:ad_count] = 0
-    end
+
 		if !user_signed_in?
 			@advertisement = Advertisement.find(1)
       @project= Project.find(params[:project_id])
